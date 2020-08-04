@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BrowserRouter from 'react-router-dom/modules/BrowserRouter';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './styles/index.css';
 import store from './Redux/store/store';

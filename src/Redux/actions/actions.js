@@ -1,5 +1,6 @@
 import {
   NEW_USER,
+  LOGGED_USER,
 } from './actionTypes';
 
 function userCreator(user) {
@@ -7,6 +8,13 @@ function userCreator(user) {
     type: NEW_USER,
     payload: user,
   };
+}
+
+function logginCreator(loggedObj) {
+  return {
+    type: LOGGED_USER,
+    payload: loggedObj,
+  }
 }
 
 export {

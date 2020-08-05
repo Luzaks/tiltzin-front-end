@@ -4,11 +4,19 @@ import Landing from '../containers/Landing';
 import Main from '../containers/Main';
 import Registration from '../components/auth/Registration';
 
-const Routes = () => (
+const Routes = ({loggedInStatus}) => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Landing} />
-      <Route exact path="/dashboard" component={Main} />
+      <Route 
+        exact path="/" 
+        render={props => (
+          <Landing {...props} loggedInStatus={loggedInStatus} />
+        )} />
+      <Route 
+        exact path="/dashboard" 
+        render={props => (
+          <Main {...props} loggedInStatus={loggedInStatus}/>
+        )} />
       <Route exact path="/signup" component={Registration} />
     </Switch>
   </BrowserRouter>

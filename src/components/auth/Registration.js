@@ -20,16 +20,16 @@ const Registration = () => {
       password_confirmation: conpass,
     };
 
-    const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
-
     dispatch(userCreator(user));
 
     axios.post('http://localhost:3001/registrations',
       {
-        user,
-      },
-      {
-        headers
+        user: {
+          username,
+          email,
+          password: pass,
+          password_confirmation: conpass,
+        },
       },
       { withCredentials: true }).then(r => {
       console.log('registraton res', r);

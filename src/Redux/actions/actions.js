@@ -19,4 +19,5 @@ function logginCreator(loggedObj) {
 
 export {
   userCreator,
+  logginCreator,
 };

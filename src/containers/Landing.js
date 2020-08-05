@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { logginCreator } from '../Redux/actions/actions';
 import Register from '../components/auth/Registration';
 
-// eslint-disable-next-line react/prefer-stateless-function
+function mapDispatchToProps(dispatch) {
+  return {
+    addLog: loggedIn => dispatch(logginCreator(loggedIn)),
+  };
+}
+
 class LandingPage extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +18,8 @@ class LandingPage extends Component {
   }
 
   handleSuccesfullAuth(data) {
-    const { history } = this.props;
+    const { history, addLog } = this.props;
+    addLog(data);
     history.push('/dashboard');
   }
 
@@ -35,7 +43,8 @@ class LandingPage extends Component {
 
 LandingPage.propTypes = {
   loggedInStatus: PropTypes.objectOf(PropTypes.any).isRequired,
-  history: PropTypes.func.isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
+  addLog: PropTypes.func.isRequired,
 };
 
-export default LandingPage;
+export default connect(null, mapDispatchToProps)(LandingPage);

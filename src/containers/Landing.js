@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import { logginCreator } from '../Redux/actions/actions';
 import Register from '../components/auth/Registration';
 import Login from '../components/auth/Login';
@@ -16,12 +17,30 @@ class LandingPage extends Component {
     super(props);
 
     this.handleSuccesfullAuth = this.handleSuccesfullAuth.bind(this);
+    this.handleLogOut = this.handleLogOut.bind(this);
   }
 
   handleSuccesfullAuth(data) {
     const { history, addLog } = this.props;
-    addLog(data);
+    const state = {
+      status: 'LOGGED_IN',
+      user: data.user
+    }
+    addLog(state);
     history.push('/dashboard');
+  }
+
+  handleLogOut() {
+    const { history, addLog } = this.props;
+    axios.delete("http://localhost:3001/logout", { withCredentials: true })
+      .then(r => { 
+        const state = {
+          status: "NOT_LOGGEd_IN",
+          user: {}
+        }
+        addLog(state);
+        history.push('/');
+      }).catch(error => {console.log(error)});
   }
 
   render() {
@@ -40,6 +59,13 @@ class LandingPage extends Component {
         <Login
           handleSuccesfullAuth={this.handleSuccesfullAuth}
         />
+        <button 
+          onClick={() => {
+            this.handleLogOut()
+          }}
+        >
+          Log out
+        </button>
       </div>
     );
   }

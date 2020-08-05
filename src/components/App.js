@@ -17,11 +17,20 @@ function mapDispatchToProps(dispatch) {
 class App extends React.Component {
 
   checkLoginStatus() {
+    const {addLog} = this.props;
     axios.get("http://localhost:3001/logged_in", { withCredentials: true })
       .then( r => { 
         if(r.data.logged_in && this.props.loggedIn.status === 'NOT_LOGGED_IN') {
-          const {addLog} = this.props;
-          addLog(r.data);
+          const state = {
+            status: "LOGGED_IN",
+            user: r.data.user
+          }
+          addLog(state);
+        } else if (!r.data.logged_in && this.props.loggedIn.status === 'LOGGED_IN') {
+          const state = {
+            status: "NOT_LOGGED_IN",
+            user: {}
+          }
         }
       })
       .catch(error => { console.log(error) });

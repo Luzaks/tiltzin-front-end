@@ -1,18 +1,40 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import axios from 'axios';
 import Routes from '../Router/Routes';
 import '../styles/App.css';
 
-function App() {
-  const loggedInStatus = useSelector(state => state.loggedIn);
+const mapStateToProps = state => ({ loggedIn: state.loggedIn });
 
-  return (
-    <div className="App">
-      <Routes
-        loggedInStatus={loggedInStatus}
-      />
-    </div>
-  );
+class App extends React.Component {
+
+  checkLoginStatus() {
+    axios.get("http://localhost:3001/logged_in", { withCredentials: true })
+      .then( r => { console.log(r) })
+      .catch(error => { console.log(error) });
+  }
+
+  componentDidMount() {
+    this.checkLoginStatus();
+  }
+
+  render() {
+
+    const { loggedIn } = this.props;
+
+    return (
+      <div className="App">
+        <Routes
+          loggedInStatus={loggedIn}
+        />
+      </div>
+    );
+  }
 }
 
-export default App;
+App.propTypes = {
+  loggedIn: PropTypes.objectOf(PropTypes.any).isRequired,
+}
+
+export default connect(mapStateToProps)(App);

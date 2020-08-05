@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logginCreator } from '../Redux/actions/actions';
 import Register from '../components/auth/Registration';
+import Login from '../components/auth/Login';
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -34,6 +35,9 @@ class LandingPage extends Component {
           {status}
         </p>
         <Register
+          handleSuccesfullAuth={this.handleSuccesfullAuth}
+        />
+        <Login
           handleSuccesfullAuth={this.handleSuccesfullAuth}
         />
       </div>

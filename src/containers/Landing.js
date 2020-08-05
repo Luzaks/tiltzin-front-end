@@ -32,7 +32,7 @@ class LandingPage extends Component {
 
   handleLogOut() {
     const { history, addLog } = this.props;
-    axios.delete('http://localhost:3001/logout', { withCredentials: true })
+    axios.delete('https://fierce-taiga-99651.herokuapp.com/logout', { withCredentials: true })
       .then(() => {
         const state = {
           status: 'NOT_LOGGED_IN',
@@ -47,7 +47,7 @@ class LandingPage extends Component {
     const { loggedInStatus } = this.props;
     const { status } = loggedInStatus;
     return (
-      <div>
+      <div className="landing-container">
         <h1>Home</h1>
         <p>
           Status:

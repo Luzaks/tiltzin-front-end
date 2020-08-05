@@ -22,7 +22,7 @@ const Registration = ({ handleSuccesfullAuth }) => {
 
     dispatch(userCreator(user));
 
-    axios.post('http://localhost:3001/registrations',
+    axios.post('https://fierce-taiga-99651.herokuapp.com/registrations',
       {
         user: {
           username,
@@ -32,6 +32,7 @@ const Registration = ({ handleSuccesfullAuth }) => {
         },
       },
       { withCredentials: true }).then(r => {
+        console.log(r);
       if (r.data.status === 'created') {
         handleSuccesfullAuth(r.data);
       }

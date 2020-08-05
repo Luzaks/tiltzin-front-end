@@ -14,7 +14,7 @@ function logginCreator(loggedObj) {
   return {
     type: LOGGED_USER,
     payload: loggedObj,
-  }
+  };
 }
 
 export {

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { userCreator } from '../../Redux/actions/actions';
 
-const Registration = () => {
+const Registration = ({ handleSuccesfullAuth }) => {
   const dispatch = useDispatch();
 
   const [username, setUsername] = useState('');
@@ -32,7 +32,9 @@ const Registration = () => {
         },
       },
       { withCredentials: true }).then(r => {
-      console.log('registraton res', r);
+      if (r.data.status === 'created') {
+        handleSuccesfullAuth(r.data);
+      }
     }).catch(error => {
       console.log('registration error', error);
     });

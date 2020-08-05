@@ -1,6 +1,6 @@
 import React from 'react';
-import Routes from '../Router/Routes';
 import { useSelector } from 'react-redux';
+import Routes from '../Router/Routes';
 import '../styles/App.css';
 
 function App() {

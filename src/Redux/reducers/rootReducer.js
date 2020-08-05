@@ -4,7 +4,7 @@ import loggedIn from './loggedInReducer';
 
 const rootReducer = combineReducers({
   user,
-  loggedIn
+  loggedIn,
 });
 
 export default rootReducer;

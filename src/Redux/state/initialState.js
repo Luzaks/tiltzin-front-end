@@ -7,8 +7,8 @@ const initialState = {
   },
   loggedIn: {
     status: 'NOT_LOGGED_IN',
-    user: {}
-  }
+    user: {},
+  },
 };
 
 export default initialState;

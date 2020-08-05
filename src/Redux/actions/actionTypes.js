@@ -3,5 +3,5 @@ const LOGGED_USER = 'LOGGED_USER';
 
 export {
   NEW_USER,
-  LOGGED_USER
+  LOGGED_USER,
 };

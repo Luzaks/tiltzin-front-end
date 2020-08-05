@@ -1,11 +1,13 @@
 import React from 'react';
-import PropTypes  from 'prop-types';
+import PropTypes from 'prop-types';
 
-
-const Main = ({loggedInStatus}) => (
+const Main = ({ loggedInStatus }) => (
   <div>
     <h1>Dashboard</h1>
-    <p>Status: {loggedInStatus.status}</p>
+    <p>
+      Status:
+      {loggedInStatus.status}
+    </p>
   </div>
 );
 

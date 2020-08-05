@@ -1,14 +1,10 @@
 const initialState = {
-  users: [
-    {
-      id: 1,
-      username: '',
-    },
-    {
-      id: 2,
-      username: '',
-    },
-  ],
+  user: {
+    username: '',
+    email: '',
+    password: '',
+    password_confirmation: '',
+  },
 };
 
 export default initialState;

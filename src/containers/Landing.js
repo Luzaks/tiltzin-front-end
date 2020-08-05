@@ -24,28 +24,28 @@ class LandingPage extends Component {
     const { history, addLog } = this.props;
     const state = {
       status: 'LOGGED_IN',
-      user: data.user
-    }
+      user: data.user,
+    };
     addLog(state);
     history.push('/dashboard');
   }
 
   handleLogOut() {
     const { history, addLog } = this.props;
-    axios.delete("http://localhost:3001/logout", { withCredentials: true })
-      .then(r => { 
+    axios.delete('http://localhost:3001/logout', { withCredentials: true })
+      .then(() => {
         const state = {
-          status: "NOT_LOGGEd_IN",
-          user: {}
-        }
+          status: 'NOT_LOGGED_IN',
+          user: {},
+        };
         addLog(state);
         history.push('/');
-      }).catch(error => {console.log(error)});
+      }).catch(error => { console.log(error); });
   }
 
   render() {
     const { loggedInStatus } = this.props;
-    const { status, user } = loggedInStatus;
+    const { status } = loggedInStatus;
     return (
       <div>
         <h1>Home</h1>
@@ -59,9 +59,10 @@ class LandingPage extends Component {
         <Login
           handleSuccesfullAuth={this.handleSuccesfullAuth}
         />
-        <button 
+        <button
+          type="submit"
           onClick={() => {
-            this.handleLogOut()
+            this.handleLogOut();
           }}
         >
           Log out

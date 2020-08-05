@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import axios from 'axios';
-import { userCreator, logginCreator } from '../../Redux/actions/actions';
+import { logginCreator } from '../../Redux/actions/actions';
 
-const Login = ({handleSuccesfullAuth}) => {
+const Login = ({ handleSuccesfullAuth }) => {
   const dispatch = useDispatch();
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
-  const [loginErrors, setLoginErrors] = useState('');
 
   function handleSubmit(ev) {
     const loggedIn = {
-      status: "LOGGED_IN",
+      status: 'LOGGED_IN',
       user: {
         username,
         email,
         password: pass,
-      }
+      },
     };
 
     dispatch(logginCreator(loggedIn));
@@ -36,7 +36,7 @@ const Login = ({handleSuccesfullAuth}) => {
         handleSuccesfullAuth(r.data);
       }
     }).catch(error => {
-      console.log('registration error', error);
+      console.log(error);
     });
     ev.preventDefault();
   }
@@ -84,6 +84,10 @@ const Login = ({handleSuccesfullAuth}) => {
       </form>
     </div>
   );
+};
+
+Login.propTypes = {
+  handleSuccesfullAuth: PropTypes.func.isRequired,
 };
 
 export default Login;

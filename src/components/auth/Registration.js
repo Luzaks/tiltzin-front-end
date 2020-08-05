@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 import { userCreator } from '../../Redux/actions/actions';
 
@@ -10,7 +11,6 @@ const Registration = ({ handleSuccesfullAuth }) => {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [conpass, setConpass] = useState('');
-  const [registErrors, setRegistErrors] = useState('');
 
   function handleSubmit(ev) {
     const user = {
@@ -36,7 +36,7 @@ const Registration = ({ handleSuccesfullAuth }) => {
         handleSuccesfullAuth(r.data);
       }
     }).catch(error => {
-      console.log('registration error', error);
+      console.log(error);
     });
     ev.preventDefault();
   }
@@ -96,6 +96,10 @@ const Registration = ({ handleSuccesfullAuth }) => {
       </form>
     </div>
   );
+};
+
+Registration.propTypes = {
+  handleSuccesfullAuth: PropTypes.func.isRequired,
 };
 
 export default Registration;

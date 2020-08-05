@@ -15,33 +15,36 @@ function mapDispatchToProps(dispatch) {
 }
 
 class App extends React.Component {
-
-  checkLoginStatus() {
-    const {addLog} = this.props;
-    axios.get("http://localhost:3001/logged_in", { withCredentials: true })
-      .then( r => { 
-        if(r.data.logged_in && this.props.loggedIn.status === 'NOT_LOGGED_IN') {
-          const state = {
-            status: "LOGGED_IN",
-            user: r.data.user
-          }
-          addLog(state);
-        } else if (!r.data.logged_in && this.props.loggedIn.status === 'LOGGED_IN') {
-          const state = {
-            status: "NOT_LOGGED_IN",
-            user: {}
-          }
-        }
-      })
-      .catch(error => { console.log(error) });
-  }
-
   componentDidMount() {
     this.checkLoginStatus();
   }
 
-  render() {
+  checkLoginStatus() {
+    const { addLog, loggedIn } = this.props;
+    const { status } = loggedIn;
+    axios.get('http://localhost:3001/logged_in', { withCredentials: true })
+      .then(r => {
+        const { data } = r;
+        const { logged_in } = data;
 
+        if (logged_in && status === 'NOT_LOGGED_IN') {
+          const state = {
+            status: 'LOGGED_IN',
+            user: r.data.user,
+          };
+          addLog(state);
+        } else if (!logged_in && status === 'LOGGED_IN') {
+          const state = {
+            status: 'NOT_LOGGED_IN',
+            user: {},
+          };
+          addLog(state);
+        }
+      })
+      .catch(error => { console.log(error); });
+  }
+
+  render() {
     const { loggedIn } = this.props;
 
     return (
@@ -56,6 +59,7 @@ class App extends React.Component {
 
 App.propTypes = {
   loggedIn: PropTypes.objectOf(PropTypes.any).isRequired,
-}
+  addLog: PropTypes.func.isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

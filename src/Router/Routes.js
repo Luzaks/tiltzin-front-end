@@ -1,19 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Landing from '../containers/Landing';
 import Main from '../containers/Main';
 import Registration from '../components/auth/Registration';
 
-const Routes = ({ loggedInStatus }) => (
-  <BrowserRouter>
-    <Switch>
-      <Route
-        exact
-        path="/"
-        render={props => (
-          <Landing {...props} loggedInStatus={loggedInStatus} />
-        )}
-      />
+const Routes = ({ loggedInStatus }) => {
+  const checkLoggin = logStatus => {
+    const dashboard = (
       <Route
         exact
         path="/dashboard"
@@ -21,9 +15,31 @@ const Routes = ({ loggedInStatus }) => (
           <Main {...props} loggedInStatus={loggedInStatus} />
         )}
       />
-      <Route exact path="/signup" component={Registration} />
-    </Switch>
-  </BrowserRouter>
-);
+    );
+
+    if (logStatus === 'LOGGED_IN') return dashboard;
+    return <div>Nothing to see here</div>;
+  };
+
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <Landing {...props} loggedInStatus={loggedInStatus} />
+          )}
+        />
+        {checkLoggin(loggedInStatus.status)}
+        <Route exact path="/signup" component={Registration} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
+
+Routes.propTypes = {
+  loggedInStatus: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default Routes;

@@ -18,6 +18,17 @@ const Title = styled.div`
   transform: rotate(-10deg);
 `;
 
+const TitleColor = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-family: Choppers;
+  font-size: 40px;
+  transform-origin: 0 0;
+  transform: rotate(-10deg);
+`;
+
 const Span = styled.span`
   text-decoration: underline;
 `;
@@ -66,23 +77,39 @@ const DashBoard = styled.div`
   height: 100%;
   border: 1px solid black;
   display: flex;
-
 `;
 
 const SideBar = styled.div`
   width: 15%;
   height: 100%;
   border: 1px dotted blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+`;
+
+const Dashy = styled.section`
+  width: 85%;
+  height: 100%;
+  border: 1px dotted red;
+  overflow: hidden;
+`;
+
+const SlideContainer = styled.div`
+  
 `;
 
 export {
   NavBar,
   Title,
+  TitleColor,
   Span,
   Brand,
   Button,
   AuthContainer,
   CircleButton,
   DashBoard,
-  SideBar
+  SideBar,
+  Dashy,
 };

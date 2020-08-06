@@ -17,8 +17,12 @@ class LandingPage extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      showed: '',
+    };
     this.handleSuccesfullAuth = this.handleSuccesfullAuth.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
+    this.showForm = this.showForm.bind(this);
   }
 
   handleSuccesfullAuth(data) {
@@ -44,22 +48,36 @@ class LandingPage extends Component {
       }).catch(error => { console.log(error); });
   }
 
+  showForm(formName) {
+    const loginForm = (
+      <Login
+        handleSuccesfullAuth={this.handleSuccesfullAuth}
+      />
+    );
+
+    const registerForm = (
+      <Register
+        handleSuccesfullAuth={this.handleSuccesfullAuth}
+      />
+    );
+
+    if (formName === 'Sign in') return loginForm;
+    if (formName === 'Sign Up') return registerForm;
+    return null;
+  }
+
   render() {
     const { loggedInStatus } = this.props;
     const { status } = loggedInStatus;
+    const { showed } = this.state;
     return (
       <div className="landing-container">
-        <NavigationBar />
+        <NavigationBar onClick={ev => this.setState({ showed: ev.target.textContent })} />
         <p>
           Status:
           {status}
         </p>
-        <Register
-          handleSuccesfullAuth={this.handleSuccesfullAuth}
-        />
-        <Login
-          handleSuccesfullAuth={this.handleSuccesfullAuth}
-        />
+        { this.showForm(showed) }
         <button
           type="submit"
           onClick={() => {

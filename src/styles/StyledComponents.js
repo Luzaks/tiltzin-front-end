@@ -40,10 +40,33 @@ const Button = styled.button`
   }
 `;
 
+const AuthContainer = styled.div`
+  width: calc(100% + 50px);
+  height: calc(100% + 49px);
+  position: relative;
+  left: -25px;
+  top: -86px;
+  background-color: rgba(255,255,255,0.5);
+`;
+
+const CircleButton = styled.button`
+  border-radius: 100%;
+  color: white;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border: none;
+  background-color: none;
+`;
+
 export {
   NavBar,
   Title,
   Span,
   Brand,
   Button,
+  AuthContainer,
+  CircleButton,
 };

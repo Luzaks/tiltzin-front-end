@@ -3,8 +3,9 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { logginCreator } from '../../Redux/actions/actions';
+import { CircleButton } from '../../styles/StyledComponents';
 
-const Login = ({ handleSuccesfullAuth }) => {
+const Login = ({ handleSuccesfullAuth, onClick }) => {
   const dispatch = useDispatch();
 
   const [username, setUsername] = useState('');
@@ -34,6 +35,7 @@ const Login = ({ handleSuccesfullAuth }) => {
       { withCredentials: true }).then(r => {
       if (r.data.logged_in) {
         handleSuccesfullAuth(r.data);
+        console.log(r.data);
       }
     }).catch(error => {
       console.log(error);
@@ -44,6 +46,7 @@ const Login = ({ handleSuccesfullAuth }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
+        <CircleButton onClick={onClick}>X</CircleButton>
         <input
           type="text"
           id="username"
@@ -88,6 +91,7 @@ const Login = ({ handleSuccesfullAuth }) => {
 
 Login.propTypes = {
   handleSuccesfullAuth: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Login;

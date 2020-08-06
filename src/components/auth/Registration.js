@@ -3,8 +3,9 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { userCreator } from '../../Redux/actions/actions';
+import { AuthContainer, CircleButton } from '../../styles/StyledComponents';
 
-const Registration = ({ handleSuccesfullAuth }) => {
+const Registration = ({ handleSuccesfullAuth, onClick }) => {
   const dispatch = useDispatch();
 
   const [username, setUsername] = useState('');
@@ -32,7 +33,7 @@ const Registration = ({ handleSuccesfullAuth }) => {
         },
       },
       { withCredentials: true }).then(r => {
-        console.log(r);
+      console.log(r);
       if (r.data.status === 'created') {
         handleSuccesfullAuth(r.data);
       }
@@ -43,8 +44,9 @@ const Registration = ({ handleSuccesfullAuth }) => {
   }
 
   return (
-    <div>
+    <AuthContainer>
       <form onSubmit={handleSubmit}>
+        <CircleButton onClick={onClick}>X</CircleButton>
         <input
           type="text"
           id="username"
@@ -95,12 +97,13 @@ const Registration = ({ handleSuccesfullAuth }) => {
         />
         <button type="submit">Register</button>
       </form>
-    </div>
+    </AuthContainer>
   );
 };
 
 Registration.propTypes = {
   handleSuccesfullAuth: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Registration;

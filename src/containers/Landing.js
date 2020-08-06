@@ -52,12 +52,14 @@ class LandingPage extends Component {
     const loginForm = (
       <Login
         handleSuccesfullAuth={this.handleSuccesfullAuth}
+        onClick={() => this.setState({ showed: '' })}
       />
     );
 
     const registerForm = (
       <Register
         handleSuccesfullAuth={this.handleSuccesfullAuth}
+        onClick={() => this.setState({ showed: '' })}
       />
     );
 
@@ -72,7 +74,9 @@ class LandingPage extends Component {
     const { showed } = this.state;
     return (
       <div className="landing-container">
-        <NavigationBar onClick={ev => this.setState({ showed: ev.target.textContent })} />
+        <NavigationBar
+          onClick={ev => this.setState({ showed: ev.target.textContent })}
+        />
         <p>
           Status:
           {status}

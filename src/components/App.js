@@ -26,6 +26,7 @@ class App extends React.Component {
       .then(r => {
         const { data } = r;
         const { logged_in } = data;
+        console.log(data);
 
         if (logged_in && status === 'NOT_LOGGED_IN') {
           const state = {

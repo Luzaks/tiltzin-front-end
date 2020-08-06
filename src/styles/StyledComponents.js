@@ -94,10 +94,16 @@ const Dashy = styled.section`
   height: 100%;
   border: 1px dotted red;
   overflow: hidden;
+  position: relative;
+  margin: 0 auto;
 `;
 
-const SlideContainer = styled.div`
-  
+const SliderCSS = styled.div`
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 `;
 
 export {
@@ -112,4 +118,5 @@ export {
   DashBoard,
   SideBar,
   Dashy,
+  SliderCSS,
 };

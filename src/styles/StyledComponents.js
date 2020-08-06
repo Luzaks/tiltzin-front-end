@@ -61,6 +61,20 @@ const CircleButton = styled.button`
   background-color: none;
 `;
 
+const DashBoard = styled.div`
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+
+`;
+
+const SideBar = styled.div`
+  width: 15%;
+  height: 100%;
+  border: 1px dotted blue;
+`;
+
 export {
   NavBar,
   Title,
@@ -69,4 +83,6 @@ export {
   Button,
   AuthContainer,
   CircleButton,
+  DashBoard,
+  SideBar
 };

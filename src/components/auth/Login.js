@@ -24,7 +24,7 @@ const Login = ({ handleSuccesfullAuth, onClick }) => {
 
     dispatch(logginCreator(loggedIn));
 
-    axios.post('https://fierce-taiga-99651.herokuapp.com/sessions',
+    axios.post('http://localhost:3001/sessions',
       {
         user: {
           username,

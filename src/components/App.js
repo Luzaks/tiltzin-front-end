@@ -22,7 +22,7 @@ class App extends React.Component {
   checkLoginStatus() {
     const { addLog, loggedIn } = this.props;
     const { status } = loggedIn;
-    axios.get('https://fierce-taiga-99651.herokuapp.com/logged_in', { withCredentials: true })
+    axios.get('http://localhost:3001/logged_in', { withCredentials: true })
       .then(r => {
         const { data } = r;
         const { logged_in } = data;

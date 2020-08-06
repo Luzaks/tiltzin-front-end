@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { DashBoard, SideBar } from '../styles/StyledComponents'
 
 const Main = ({ loggedInStatus }) => (
-  <div>
-    <h1>Dashboard</h1>
-    <p>
-      Status:
-      {loggedInStatus.status}
-    </p>
-  </div>
+  <DashBoard>
+   <SideBar>
+
+   </SideBar>
+  </DashBoard>
 );
 
 Main.propTypes = {

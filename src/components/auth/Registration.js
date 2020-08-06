@@ -23,7 +23,7 @@ const Registration = ({ handleSuccesfullAuth, onClick }) => {
 
     dispatch(userCreator(user));
 
-    axios.post('https://fierce-taiga-99651.herokuapp.com/registrations',
+    axios.post('http://localhost:3001/registrations',
       {
         user: {
           username,

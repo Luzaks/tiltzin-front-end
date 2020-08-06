@@ -5,6 +5,7 @@ import axios from 'axios';
 import { logginCreator } from '../Redux/actions/actions';
 import Register from '../components/auth/Registration';
 import Login from '../components/auth/Login';
+import NavigationBar from '../components/Landing/NavBar';
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -48,7 +49,7 @@ class LandingPage extends Component {
     const { status } = loggedInStatus;
     return (
       <div className="landing-container">
-        <h1>Home</h1>
+        <NavigationBar />
         <p>
           Status:
           {status}

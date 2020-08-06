@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Typographica';
+  src: local('Typographica'),
+  url('../assets/fonts/Typographica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Choppers';
+  src: local('Choppers'),
+  url('../assets/fonts/Choppers.ttf') format('truetype');
+}
+
 html,
 body {
   margin: 0;

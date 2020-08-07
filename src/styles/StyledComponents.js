@@ -86,6 +86,16 @@ const DashBoard = styled.div`
   display: flex;
 `;
 
+const DestinyInfo = styled.div`
+  width: 100%;
+  height: 12.5%;
+  display:flex;
+  align-self: flex-end;
+  padding: 1.5% 5%;
+  color: rgba(225,225,225,0.9); 
+  font-weight: 900;
+`;
+
 const SideBar = styled.div`
   width: 20%;
   height: 100%;
@@ -93,7 +103,7 @@ const SideBar = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items:center;
-  background-color: rgba(225, 225, 225, 0.1);
+  background-color: rgba(225,225,225,0.3);
 `;
 
 const PagesConatiner = styled.div`
@@ -243,4 +253,5 @@ export {
   Credits,
   PagesConatiner,
   PagesLink,
+  DestinyInfo,
 };

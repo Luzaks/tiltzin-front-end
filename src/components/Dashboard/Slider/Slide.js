@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Info from './Info';
 
 const Slide = ({ content }) => (
   <div
@@ -10,8 +11,9 @@ const Slide = ({ content }) => (
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
+      display: 'flex',
     }}
-  />
+  ><Info /> </div>
 );
 
 Slide.propTypes = {

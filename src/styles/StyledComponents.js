@@ -21,7 +21,7 @@ const Title = styled.div`
   align-items: center;
   color: white;
   font-family: Choppers;
-  font-size: 40px;
+  font-size: 45px;
   transform-origin: 0 0;
   transform: rotate(-10deg);
 `;
@@ -32,7 +32,7 @@ const TitleColor = styled.div`
   align-items: center;
   color: #71706e;
   font-family: Choppers;
-  font-size: 40px;
+  font-size: 45px;
   transform-origin: 0 0;
   transform: rotate(-10deg);
 `;
@@ -87,7 +87,7 @@ const DashBoard = styled.div`
 `;
 
 const SideBar = styled.div`
-  width: 15%;
+  width: 20%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@ const PagesConatiner = styled.div`
 const PagesLink = styled.div`
   width: 75%;
   height: 38px;
-  background-color: #dcd0ff;
+  background-color: #59daae;
   margin: 10px 0;
   display: flex;
   justify-content: flex-start;
@@ -118,6 +118,10 @@ const PagesLink = styled.div`
   font-weight: 900;
   padding-left: 14px;
   font-size: 13px;
+  &:hover {
+    cursor: pointer;
+    background-color: #dcd0ff;
+  }
 `;
 
 const SideFoot = styled.div`
@@ -150,7 +154,7 @@ const Credits = styled.span`
 `;
 
 const Dashy = styled.section`
-  width: 85%;
+  width: 80%;
   height: 100%;
   overflow: hidden;
   position: relative;

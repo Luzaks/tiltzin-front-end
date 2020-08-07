@@ -1,7 +1,7 @@
 import React from 'react';
-import leftArrow from '../../assets/imgs/left.png';
-import rightArrow from '../../assets/imgs/right.png';
-import { Right, Left } from '../../styles/StyledComponents';
+import leftArrow from '../../../assets/imgs/left.png';
+import rightArrow from '../../../assets/imgs/right.png';
+import { Right, Left } from '../../../styles/StyledComponents';
 
 const Arrow = ({ direction, handleClick }) => {
   const RightArrow = (

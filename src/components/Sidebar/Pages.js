@@ -1,11 +1,16 @@
 import React from 'react';
-import { PagesConatiner, PagesLink } from '../../styles/StyledComponents';
+import { useSelector } from 'react-redux';
+import { PagesConatiner } from '../../styles/StyledComponents';
+import pagesHelper from '../../helpers/pagesHelper';
 
-const Pages = () => (
-  <PagesConatiner>
-    <PagesLink>MODELS</PagesLink>
-    <PagesLink>APPOITMENTS</PagesLink>
-  </PagesConatiner>
-);
+const Pages = () => {
+  const pagesState = useSelector(state => state.pages.pages);
+
+  return (
+    <PagesConatiner>
+      {pagesState.map(page => (pagesHelper(page)))}
+    </PagesConatiner>
+  );
+};
 
 export default Pages;

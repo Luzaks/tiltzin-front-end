@@ -23,6 +23,7 @@ function pagesCreator(clickedPage) {
     type: CLICKED_PAGE,
     payload: {
       clicked: clickedPage,
+      pages: ['MODELS', 'APPOINTMENTS'],
     },
   };
 }

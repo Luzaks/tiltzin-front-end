@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import SliderContent from './SliderContent';
+import SliderContent from '../../../styles/SliderContent';
 import Slide from './Slide';
 import Arrow from './Arrow';
-import { SliderCSS } from '../../styles/StyledComponents';
+import { SliderCSS } from '../../../styles/StyledComponents';
 
 const Slider = ({ slides }) => {
   const getWidth = () => window.innerWidth;

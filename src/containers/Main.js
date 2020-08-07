@@ -5,7 +5,7 @@ import {
   DashBoard, SideBar, Dashy,
 } from '../styles/StyledComponents';
 import Tittle from '../components/Sidebar/Title';
-import Slider from '../components/Dashboard/Slider';
+import Slider from '../components/Dashboard/Slider/Slider';
 import Footer from '../components/Sidebar/Footer';
 import Pages from '../components/Sidebar/Pages';
 

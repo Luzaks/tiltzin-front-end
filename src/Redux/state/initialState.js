@@ -11,6 +11,7 @@ const initialState = {
   },
   pages: {
     clicked: 'none',
+    pages: ['MODELS', 'APPOINTMENTS'],
   },
 };
 

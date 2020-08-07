@@ -106,6 +106,52 @@ const SliderCSS = styled.div`
   overflow: hidden;
 `;
 
+const Right = styled.div`
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  transition: transform ease-in 0.1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  img {
+    transform: translateX(2px);
+    &:focus {
+      outline: 0;
+    }
+`;
+
+const Left = styled.div`
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  transition: transform ease-in 0.1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  img {
+    transform: translateX(-2px);
+    &:focus {
+      outline: 0;
+    }
+`;
+
 export {
   NavBar,
   Title,
@@ -119,4 +165,6 @@ export {
   SideBar,
   Dashy,
   SliderCSS,
+  Right,
+  Left,
 };

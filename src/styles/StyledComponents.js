@@ -95,6 +95,30 @@ const SideBar = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items:center;
+  background-color: rgba(225, 225, 225, 0.2);
+`;
+
+const PagesConatiner = styled.div`
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+`;
+
+const PagesLink = styled.div`
+  width: 75%;
+  height: 38px;
+  background-color: green;
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  font-weight: 900;
+  padding-left: 14px;
+  font-size: 13px;
 `;
 
 const SideFoot = styled.div`
@@ -209,4 +233,6 @@ export {
   Left,
   Icon,
   Credits,
+  PagesConatiner,
+  PagesLink,
 };

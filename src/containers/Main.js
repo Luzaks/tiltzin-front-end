@@ -7,6 +7,7 @@ import {
 import Tittle from '../components/Sidebar/Title';
 import Slider from '../components/Dashboard/Slider';
 import Footer from '../components/Sidebar/Footer';
+import Pages from '../components/Sidebar/Pages';
 
 const Main = ({ loggedInStatus }) => {
   const clicked = useSelector(state => state.pages.clicked);
@@ -25,9 +26,7 @@ const Main = ({ loggedInStatus }) => {
       {console.log(loggedInStatus)}
       <SideBar>
         <Tittle />
-        <div>
-          Hola
-        </div>
+        <Pages />
         <Footer />
       </SideBar>
       <Dashy>

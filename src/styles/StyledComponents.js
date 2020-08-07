@@ -9,9 +9,9 @@ const NavBar = styled.nav`
 
 const TitleCont = styled.div`
   width: 100%;
-  height: 10%;
+  height: 15%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 `;
 
@@ -30,7 +30,7 @@ const TitleColor = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #71706e;
   font-family: Choppers;
   font-size: 40px;
   transform-origin: 0 0;
@@ -83,34 +83,33 @@ const CircleButton = styled.button`
 const DashBoard = styled.div`
   width: 100%;
   height: 100%;
-  border: 1px solid black;
   display: flex;
 `;
 
 const SideBar = styled.div`
   width: 15%;
   height: 100%;
-  border: 1px dotted blue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items:center;
-  background-color: rgba(225, 225, 225, 0.2);
+  background-color: rgba(225, 225, 225, 0.1);
 `;
 
 const PagesConatiner = styled.div`
   width: 100%;
-  height: 80%;
+  height: 72.5%;
+  padding-top: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
 `;
 
 const PagesLink = styled.div`
   width: 75%;
   height: 38px;
-  background-color: green;
+  background-color: #dcd0ff;
   margin: 10px 0;
   display: flex;
   justify-content: flex-start;
@@ -123,7 +122,7 @@ const PagesLink = styled.div`
 
 const SideFoot = styled.div`
   width: 100%;
-  height: 10%;
+  height: 12.5%;
   display: flex;
   flex-Direction: column;
   align-items: center;
@@ -153,7 +152,6 @@ const Credits = styled.span`
 const Dashy = styled.section`
   width: 85%;
   height: 100%;
-  border: 1px dotted red;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -183,6 +181,9 @@ const Right = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+  &:active {
+    transform: scale(0.9);
+  }
   img {
     transform: translateX(2px);
     &:focus {
@@ -205,6 +206,9 @@ const Left = styled.div`
   transition: transform ease-in 0.1s;
   &:hover {
     transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
   }
   img {
     transform: translateX(-2px);

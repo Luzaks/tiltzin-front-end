@@ -9,6 +9,9 @@ const initialState = {
     status: 'NOT_LOGGED_IN',
     user: {},
   },
+  pages: {
+    clicked: 'none',
+  },
 };
 
 export default initialState;

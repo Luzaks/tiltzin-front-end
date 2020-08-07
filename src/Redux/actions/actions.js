@@ -1,6 +1,7 @@
 import {
   NEW_USER,
   LOGGED_USER,
+  CLICKED_PAGE,
 } from './actionTypes';
 
 function userCreator(user) {
@@ -17,7 +18,17 @@ function logginCreator(loggedObj) {
   };
 }
 
+function pagesCreator(clickedPage) {
+  return {
+    type: CLICKED_PAGE,
+    payload: {
+      clicked: clickedPage,
+    },
+  };
+}
+
 export {
   userCreator,
   logginCreator,
+  pagesCreator,
 };

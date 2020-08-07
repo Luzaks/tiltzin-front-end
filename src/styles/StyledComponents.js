@@ -7,6 +7,14 @@ const NavBar = styled.nav`
   justify-content: space-between;
 `;
 
+const TitleCont = styled.div`
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Title = styled.div`
   display: flex;
   justify-content: center;
@@ -89,6 +97,35 @@ const SideBar = styled.div`
   align-items:center;
 `;
 
+const SideFoot = styled.div`
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-Direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const MiddleFoot = styled.div`
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Icon = styled.img`
+  width: 17px;
+  height: 17px;
+  margin: 0 5px;
+`;
+
+const Credits = styled.span`
+  color: grey;
+  font-size: 10px;
+`;
+
 const Dashy = styled.section`
   width: 85%;
   height: 100%;
@@ -156,6 +193,7 @@ export {
   NavBar,
   Title,
   TitleColor,
+  TitleCont,
   Span,
   Brand,
   Button,
@@ -163,8 +201,12 @@ export {
   CircleButton,
   DashBoard,
   SideBar,
+  SideFoot,
+  MiddleFoot,
   Dashy,
   SliderCSS,
   Right,
   Left,
+  Icon,
+  Credits,
 };

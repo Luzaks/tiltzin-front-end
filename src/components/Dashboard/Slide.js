@@ -16,6 +16,6 @@ const Slide = ({ content }) => (
 
 Slide.propTypes = {
   content: PropTypes.string.isRequired,
-}
+};
 
 export default Slide;

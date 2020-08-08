@@ -3,6 +3,7 @@ import {
   LOGGED_USER,
   CLICKED_PAGE,
   CREATE_DESTINY,
+  CREATE_SELECTED,
 } from './actionTypes';
 
 function userCreator(user) {
@@ -36,9 +37,17 @@ function destiniesCreator(destinies) {
   };
 }
 
+function selectedCreator(destiny) {
+  return {
+    type: CREATE_SELECTED,
+    payload: destiny
+  };
+}
+
 export {
   userCreator,
   logginCreator,
   pagesCreator,
   destiniesCreator,
+  selectedCreator,
 };

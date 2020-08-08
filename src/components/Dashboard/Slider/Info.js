@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { DestinyInfo, DestinyDashy } from '../../../styles/StyledComponents';
 
-const Info = ({ city, country, family, description, state, famdesc, id}) => {
+const Info = ({ city, state }) => {
   return(
     <DestinyInfo>
         <DestinyDashy>{ city }</DestinyDashy>
@@ -14,12 +14,7 @@ const Info = ({ city, country, family, description, state, famdesc, id}) => {
 
 Info.propTypes = {
   city: PropTypes.string.isRequired,
-  country: PropTypes.string.isRequired,
-  family: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
-  famdescription: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
 };
 
 export default Info;

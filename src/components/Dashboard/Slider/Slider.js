@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import SliderContent from '../../../styles/SliderContent';
 import Slide from './Slide';
@@ -61,13 +61,7 @@ const Slider = ({ slides }) => {
           <Slide 
             key={slide.city} 
             content={slide.url} 
-            city={slide.city}
-            country={slide.country}
-            family={slide.family}
-            description={slide.description}
-            state={slide.state}
-            famdescription={slide.famdescription}
-            id={slide.id}
+            destiny={slide}
           />
         ))}
       </SliderContent>

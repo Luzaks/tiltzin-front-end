@@ -87,7 +87,7 @@ const DashBoard = styled.div`
 `;
 
 const DestinyInfo = styled.div`
-  width: 80vw;
+  width: 30vw;
   height: 12.5%;
   display:flex;
   align-self: flex-end;
@@ -236,8 +236,7 @@ const DestinyDashy = styled.p`
 `;
 
 const DesLinkCont = styled.div`
-  display: flex;
-  align-self: flex-start;
+ color: white;
 `;
 
 export {

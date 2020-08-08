@@ -3,12 +3,14 @@ import user from './userReducer';
 import loggedIn from './loggedInReducer';
 import pages from './pagesReducer';
 import destinies from './destiniesReducer';
+import selected from './selectedReducer';
 
 const rootReducer = combineReducers({
   user,
   loggedIn,
   pages,
   destinies,
+  selected,
 });
 
 export default rootReducer;

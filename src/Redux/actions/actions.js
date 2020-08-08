@@ -37,10 +37,13 @@ function destiniesCreator(destinies) {
   };
 }
 
-function selectedCreator(destiny) {
+function selectedCreator(isActive, destinyObj) {
   return {
     type: CREATE_SELECTED,
-    payload: destiny
+    payload: {
+      active: isActive,
+      destiny: destinyObj,
+    }
   };
 }
 

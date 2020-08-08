@@ -14,7 +14,10 @@ const initialState = {
     pages: ['DESTINIES', 'APPOINTMENTS'],
   },
   destinies: [],
-  selected: {},
+  selected: {
+    active: false,
+    destiny: {},
+  },
 };
 
 export default initialState;

@@ -58,9 +58,9 @@ const Slider = ({ slides }) => {
         width={getWidth() * slides.length}
       >
         {slides.map(slide => (
-          <Slide 
-            key={slide.city} 
-            content={slide.url} 
+          <Slide
+            key={slide.city}
+            content={slide.url}
             destiny={slide}
           />
         ))}

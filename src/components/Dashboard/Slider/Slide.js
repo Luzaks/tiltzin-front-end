@@ -4,7 +4,7 @@ import Info from './Info';
 import DestinyLink from './DestinyLink';
 import { DestinyWrap } from '../../../styles/StyledComponents';
 
-const Slide = ({ content, destiny, }) => {
+const Slide = ({ content, destiny }) => {
   const { city, state, country } = destiny;
   return (
     <div
@@ -23,12 +23,13 @@ const Slide = ({ content, destiny, }) => {
         <Info
           city={city}
           state={state}
-          country={country} />
+          country={country}
+        />
 
         <DestinyLink destiny={destiny} />
-      </DestinyWrap>  
+      </DestinyWrap>
     </div>
-  )
+  );
 };
 
 Slide.propTypes = {

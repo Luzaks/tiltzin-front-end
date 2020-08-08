@@ -103,8 +103,10 @@ const DestinyInfo = styled.div`
   margin-bottom: 12px;
   color: rgba(225,225,225,0.9); 
   font-weight: 900;
-  border-top: rgba(225,225,225,0.8) solid 5px;
-  border-bottom: rgba(225,225,225,0.8) solid 5px;
+  border-top: rgba(225,225,225,0.9) solid 5px;
+  border-bottom: rgba(225,225,225,0.9) solid 5px;
+  color: #d9d9d9;
+  text-shadow: -2px -2px 2px rgba( 255, 255, 255, 0.1), 2px 2px 2px rgba( 0, 0, 0, 0.7);
   width: fit-content;
   height: fit-content;
 `;
@@ -124,6 +126,7 @@ const Know = styled.p`
   font-size: 15px;
   height: fit-content;
   font-weight: 900;
+  text-shadow: -2px -2px 2px rgba( 255, 255, 255, 0.1), 2px 2px 2px rgba( 0, 0, 0, 0.7);
 `;
 
 const SideBar = styled.div`

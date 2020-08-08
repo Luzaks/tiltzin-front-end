@@ -8,7 +8,7 @@ const Arrow = ({ direction, handleClick }) => {
     <Right
       onClick={handleClick}
     >
-      <img src={rightArrow} alt="right-arrow" />
+      <img className="arrows" src={rightArrow} alt="right-arrow" />
     </Right>
   );
 
@@ -16,7 +16,7 @@ const Arrow = ({ direction, handleClick }) => {
     <Left
       onClick={handleClick}
     >
-      <img src={leftArrow} alt="left-arrow" />
+      <img className="arrows" src={leftArrow} alt="left-arrow" />
     </Left>
   );
 

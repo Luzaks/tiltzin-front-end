@@ -33,7 +33,7 @@ function pagesCreator(clickedPage) {
 function destiniesCreator(destinies) {
   return {
     type: CREATE_DESTINY,
-    payload: destinies
+    payload: destinies,
   };
 }
 
@@ -43,7 +43,7 @@ function selectedCreator(isActive, destinyObj) {
     payload: {
       active: isActive,
       destiny: destinyObj,
-    }
+    },
   };
 }
 

@@ -52,8 +52,6 @@ class App extends React.Component {
   render() {
     const { loggedIn, handleGetData } = this.props;
 
-    
-  
     async function fetchData() {
       try {
         const destinies = await getDestinies();

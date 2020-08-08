@@ -11,6 +11,7 @@ import dashboardHelper from '../helpers/dashboardHelper';
 
 const Main = ({ loggedInStatus }) => {
   const clicked = useSelector(state => state.pages.clicked);
+  const destinies = useSelector(state => state.destinies);
 
   return (
     <DashBoard>
@@ -21,7 +22,7 @@ const Main = ({ loggedInStatus }) => {
         <Footer />
       </SideBar>
       <Dashy>
-        { dashboardHelper(clicked) }
+        { dashboardHelper(clicked, destinies) }
       </Dashy>
     </DashBoard>
   );

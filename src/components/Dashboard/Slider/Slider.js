@@ -6,7 +6,6 @@ import Arrow from './Arrow';
 import { SliderCSS } from '../../../styles/StyledComponents';
 
 const Slider = ({ slides }) => {
-  console.log(slides)
   const getWidth = () => window.innerWidth;
 
   const [state, setState] = useState({
@@ -59,7 +58,17 @@ const Slider = ({ slides }) => {
         width={getWidth() * slides.length}
       >
         {slides.map(slide => (
-          <Slide key={slide} content={slide} />
+          <Slide 
+            key={slide.city} 
+            content={slide.url} 
+            city={slide.city}
+            country={slide.country}
+            family={slide.family}
+            description={slide.description}
+            state={slide.state}
+            famdescription={slide.famdescription}
+            id={slide.id}
+          />
         ))}
       </SliderContent>
       <Arrow direction="left" handleClick={prevSlide} />

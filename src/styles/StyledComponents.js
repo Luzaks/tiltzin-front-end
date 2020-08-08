@@ -87,7 +87,7 @@ const DashBoard = styled.div`
 `;
 
 const DestinyInfo = styled.div`
-  width: 100%;
+  width: 80vw;
   height: 12.5%;
   display:flex;
   align-self: flex-end;
@@ -231,6 +231,15 @@ const Left = styled.div`
     }
 `;
 
+const DestinyDashy = styled.p`
+  margin-left: 10px;
+`;
+
+const DesLinkCont = styled.div`
+  display: flex;
+  align-self: flex-start;
+`;
+
 export {
   NavBar,
   Title,
@@ -254,4 +263,6 @@ export {
   PagesConatiner,
   PagesLink,
   DestinyInfo,
+  DestinyDashy,
+  DesLinkCont,
 };

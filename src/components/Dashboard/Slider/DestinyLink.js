@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { DesLinkCont } from '../../../styles/StyledComponents';
+import { Wrap, Know } from '../../../styles/StyledComponents';
 import { selectedCreator } from '../../../Redux/actions/actions';
+import Logo from '../../../assets/imgs/logo.png';
+
 
 const DestinyLink = ({ destiny }) => {
-  const { id } = destiny; 
   const dispatch = useDispatch();  
   return (
-    <DesLinkCont
+    <Wrap
       onClick={() => {
         dispatch(selectedCreator(true, destiny)); 
       }}  
-    >
-      see      
-    </DesLinkCont>
+    >    
+        <img className="info-logo" src={Logo} alt="logo" />
+        <Know>Know more</Know>
+    </Wrap>
   );
 };
 

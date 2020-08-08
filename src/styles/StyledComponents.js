@@ -86,13 +86,43 @@ const DashBoard = styled.div`
   display: flex;
 `;
 
+const DestinyWrap = styled.div` 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(220, 208, 255, 0.3);
+`;
+
 const DestinyInfo = styled.div`
-  width: 30vw;
-  height: 12.5%;
+  width: 100%;
+  height: 50%;
   display:flex;
-  align-self: flex-end;
-  padding: 1.5% 5%;
+  flex-direction: column;
+  margin: 5%;
+  margin-bottom: 12px;
   color: rgba(225,225,225,0.9); 
+  font-weight: 900;
+  border-top: rgba(225,225,225,0.8) solid 5px;
+  border-bottom: rgba(225,225,225,0.8) solid 5px;
+  width: fit-content;
+  height: fit-content;
+`;
+
+const Wrap = styled.div`
+  display: flex;
+  margin: 5%;
+  margin-top: 0;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  color: rgba(225,225,225,0.9); 
+  font-size: 15px;
+`;
+
+const Know = styled.p`
+  font-size: 15px;
+  height: fit-content;
   font-weight: 900;
 `;
 
@@ -187,7 +217,7 @@ const Right = styled.div`
   height: 50px;
   width: 50px;
   justify-content: center;
-  background: transparent;
+  background: #59daae;
   border-radius: 50%;
   cursor: pointer;
   align-items: center;
@@ -213,7 +243,7 @@ const Left = styled.div`
   height: 50px;
   width: 50px;
   justify-content: center;
-  background: transparent;
+  background: #59daae;
   border-radius: 50%;
   cursor: pointer;
   align-items: center;
@@ -231,12 +261,19 @@ const Left = styled.div`
     }
 `;
 
-const DestinyDashy = styled.p`
-  margin-left: 10px;
+const DestinyCity = styled.span`
+  font-size: 60px;
+  display: flex;
+  width: fit-content;
+  width: -moz-fit-content;
+`;
+const DestinyState = styled.p`
+  font-size: 40px;
 `;
 
-const DesLinkCont = styled.div`
- color: white;
+const DestinyCountry = styled.p`
+  font-size: 20px;
+  margin-bottom: 13px;
 `;
 
 export {
@@ -261,7 +298,11 @@ export {
   Credits,
   PagesConatiner,
   PagesLink,
+  DestinyWrap,
   DestinyInfo,
-  DestinyDashy,
-  DesLinkCont,
+  DestinyCity,
+  DestinyState,
+  DestinyCountry,
+  Wrap,
+  Know,
 };

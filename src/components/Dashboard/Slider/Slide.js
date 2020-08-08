@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Info from './Info';
 import DestinyLink from './DestinyLink';
+import { DestinyWrap } from '../../../styles/StyledComponents';
 
 const Slide = ({ content, destiny, }) => {
-  const { city, state } = destiny;
+  const { city, state, country } = destiny;
   return (
     <div
       style={{
@@ -17,11 +18,15 @@ const Slide = ({ content, destiny, }) => {
         display: 'flex',
       }}
     >
-      <Info
-        city={city}
-        state={state} />
+      <DestinyWrap>
 
-      <DestinyLink destiny={destiny} />
+        <Info
+          city={city}
+          state={state}
+          country={country} />
+
+        <DestinyLink destiny={destiny} />
+      </DestinyWrap>  
     </div>
   )
 };

@@ -10,6 +10,12 @@
   url('../assets/fonts/Choppers.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Makeup';
+  src: local('Makeup'),
+  url('../assets/fonts/Makeup.ttf') format('truetype');
+}
+
 html,
 body {
   margin: 0;

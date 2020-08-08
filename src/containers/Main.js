@@ -24,7 +24,6 @@ const Main = ({ loggedInStatus }) => {
       </SideBar>
       <Dashy>
         { dashboardHelper(clicked, destinies, selected) }
-
       </Dashy>
     </DashBoard>
   );

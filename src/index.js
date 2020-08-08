@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './styles/index.css';
 import './assets/fonts/Typographica.ttf';
 import './assets/fonts/Choppers.ttf';
+import './assets/fonts/Makeup.ttf';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './Redux/store/store';

@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { DestinyInfo, DestinyDashy } from '../../../styles/StyledComponents';
+import { 
+  DestinyInfo, 
+  DestinyCity,
+  DestinyState,
+  DestinyCountry } from '../../../styles/StyledComponents';
 
-const Info = ({ city, state }) => {
+const Info = ({ city, state, country }) => {
   return(
     <DestinyInfo>
-        <DestinyDashy>{ city }</DestinyDashy>
-        {' '}
-        <DestinyDashy>{ state }</DestinyDashy>
+      <DestinyCity>{ city }</DestinyCity>
+      <DestinyState>{ state }</DestinyState>
+      <DestinyCountry>{ country }</DestinyCountry>
     </DestinyInfo>  
   );
 };
@@ -15,6 +19,7 @@ const Info = ({ city, state }) => {
 Info.propTypes = {
   city: PropTypes.string.isRequired,
   state: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
 };
 
 export default Info;

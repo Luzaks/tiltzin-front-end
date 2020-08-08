@@ -6,7 +6,6 @@ import { selectedCreator } from '../Redux/actions/actions';
 const Destiny = destiny => {
   const { city } = destiny.destiny;
   const dispatch = useDispatch();
-  console.log('Item', destiny.destiny);
   return(
     <div>
       <span>{city}</span>

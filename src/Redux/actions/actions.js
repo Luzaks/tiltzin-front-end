@@ -2,6 +2,7 @@ import {
   NEW_USER,
   LOGGED_USER,
   CLICKED_PAGE,
+  CREATE_DESTINY,
 } from './actionTypes';
 
 function userCreator(user) {
@@ -23,8 +24,15 @@ function pagesCreator(clickedPage) {
     type: CLICKED_PAGE,
     payload: {
       clicked: clickedPage,
-      pages: ['MODELS', 'APPOINTMENTS'],
+      pages: ['DESTINIES', 'APPOINTMENTS'],
     },
+  };
+}
+
+function destiniesCreator(destinies) {
+  return {
+    type: CREATE_DESTINY,
+    payload: destinies
   };
 }
 
@@ -32,4 +40,5 @@ export {
   userCreator,
   logginCreator,
   pagesCreator,
+  destiniesCreator,
 };

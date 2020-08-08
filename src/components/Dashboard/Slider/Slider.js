@@ -6,6 +6,7 @@ import Arrow from './Arrow';
 import { SliderCSS } from '../../../styles/StyledComponents';
 
 const Slider = ({ slides }) => {
+  console.log(slides)
   const getWidth = () => window.innerWidth;
 
   const [state, setState] = useState({
@@ -68,7 +69,7 @@ const Slider = ({ slides }) => {
 };
 
 Slider.propTypes = {
-  slides: PropTypes.arrayOf(PropTypes.string).isRequired,
+  slides: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Slider;

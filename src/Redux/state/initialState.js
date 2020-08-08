@@ -11,8 +11,9 @@ const initialState = {
   },
   pages: {
     clicked: 'none',
-    pages: ['MODELS', 'APPOINTMENTS'],
+    pages: ['DESTINIES', 'APPOINTMENTS'],
   },
+  destinies: [],
 };
 
 export default initialState;

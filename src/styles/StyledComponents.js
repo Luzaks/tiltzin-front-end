@@ -212,7 +212,7 @@ const SliderCSS = styled.div`
   overflow: hidden;
 `;
 
-const Right = styled.div`
+const Right = styled.button`
   display: flex;
   position: absolute;
   top: 50%;
@@ -238,7 +238,7 @@ const Right = styled.div`
     }
 `;
 
-const Left = styled.div`
+const Left = styled.button`
   display: flex;
   position: absolute;
   top: 50%;
@@ -279,6 +279,43 @@ const DestinyCountry = styled.p`
   margin-bottom: 13px;
 `;
 
+const Details = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+`;
+
+const DetailsHalf = styled.div`
+  width: 50%;
+  height: 100%;
+`;
+
+const Return = styled.button`
+display: flex;
+position: absolute;
+top: 80%;
+left: 25px;
+height: 50px;
+width: 50px;
+justify-content: center;
+background: #59daae;
+border-radius: 50%;
+cursor: pointer;
+align-items: center;
+transition: transform ease-in 0.1s;
+&:hover {
+  transform: scale(1.1);
+}
+&:active {
+  transform: scale(0.9);
+}
+img {
+  transform: translateX(-2px);
+  &:focus {
+    outline: 0;
+  }
+`;
+
 export {
   NavBar,
   Title,
@@ -308,4 +345,7 @@ export {
   DestinyCountry,
   Wrap,
   Know,
+  Details,
+  DetailsHalf,
+  Return,
 };

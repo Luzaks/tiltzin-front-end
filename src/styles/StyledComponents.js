@@ -32,7 +32,7 @@ const TitleColor = styled.div`
   align-items: center;
   color: #71706e;
   font-family: Choppers;
-  font-size: 45px;
+  font-size: 50px;
   transform-origin: 0 0;
   transform: rotate(-10deg);
 `;
@@ -285,9 +285,16 @@ const Details = styled.div`
   display: flex;
 `;
 
-const DetailsHalf = styled.div`
-  width: 50%;
+const LeftHalf = styled.div`
+  width: 65%;
   height: 100%;
+`;
+
+const RightHalf = styled.div`
+  width: 35%;
+  height: 100%;
+  background-color: rgba(225,225,225,0.3);
+  padding: 7% 3% 0 0;
 `;
 
 const Return = styled.button`
@@ -314,6 +321,27 @@ img {
   &:focus {
     outline: 0;
   }
+`;
+
+const PresentationCity = styled.h1`
+  font-family: ImSpiegelland;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 38px;
+  font-weight: 900;
+  text-align: right;
+  letter-spacing: 0.5px;
+  text-shadow: 3px 2px 3px #dcd0ff;
+`;
+
+const PresentationLocation = styled.p`
+  font-family: ImSpiegelland;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  font-weight: 900;
+  text-align: right;
+  letter-spacing: 0.5px;
 `;
 
 export {
@@ -346,6 +374,9 @@ export {
   Wrap,
   Know,
   Details,
-  DetailsHalf,
+  LeftHalf,
+  RightHalf,
   Return,
+  PresentationCity,
+  PresentationLocation,
 };

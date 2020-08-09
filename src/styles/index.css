@@ -11,9 +11,9 @@
 }
 
 @font-face {
-  font-family: 'Makeup';
-  src: local('Makeup'),
-  url('../assets/fonts/Makeup.ttf') format('truetype');
+  font-family: 'ImSpiegelland';
+  src: local('ImSpiegelland'),
+  url('../assets/fonts/ImSpiegelland.ttf') format('truetype');
 }
 
 html,

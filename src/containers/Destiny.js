@@ -8,11 +8,21 @@ import {
   RightHalf, 
   Return,
   PresentationCity,
-  PresentationLocation } from '../styles/StyledComponents';
+  PresentationLocation,
+  PresDescription,
+  PresentationFamily,
+ } from '../styles/StyledComponents';
 import ReturnArrow from '../assets/imgs/left.png';
 
 const Destiny = ({ destiny }) => {
-  const { city, url, state, country } = destiny;
+  const { 
+    city, 
+    url, 
+    state, 
+    country, 
+    description,
+    family,
+    famdescription } = destiny;
   const dispatch = useDispatch();
   return (
     <Details>
@@ -38,6 +48,18 @@ const Destiny = ({ destiny }) => {
           {' '}
           { country }
         </PresentationLocation>
+        <PresentationFamily>
+          What to do?
+        </PresentationFamily>
+        <PresDescription>
+          { description }
+        </PresDescription>
+        <PresentationFamily>
+          Counselor family: {family}
+        </PresentationFamily>
+        <PresDescription>
+          { famdescription }
+        </PresDescription>
       </RightHalf>
       <Return
         onClick={() => {

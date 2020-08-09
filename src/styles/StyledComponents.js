@@ -295,6 +295,8 @@ const RightHalf = styled.div`
   height: 100%;
   background-color: rgba(225,225,225,0.3);
   padding: 7% 3% 0 0;
+  font-family: ImSpiegelland;
+  letter-spacing: 0.5px;
 `;
 
 const Return = styled.button`
@@ -324,24 +326,36 @@ img {
 `;
 
 const PresentationCity = styled.h1`
-  font-family: ImSpiegelland;
   margin: 0;
   color: rgba(0, 0, 0, 0.7);
   font-size: 38px;
   font-weight: 900;
   text-align: right;
-  letter-spacing: 0.5px;
   text-shadow: 3px 2px 3px #dcd0ff;
 `;
 
 const PresentationLocation = styled.p`
-  font-family: ImSpiegelland;
   margin: 0;
+  margin-bottom: 6%;
   color: rgba(0, 0, 0, 0.7);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 900;
   text-align: right;
-  letter-spacing: 0.5px;
+`;
+
+const PresDescription = styled.div`
+  float: left;
+  text-align: left;
+  padding-left: 4%;
+  font-size: 18px;
+`;
+
+const PresentationFamily = styled.div`
+  float: left;
+  text-align: left;
+  padding: 0 4%;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.1);
 `;
 
 export {
@@ -379,4 +393,6 @@ export {
   Return,
   PresentationCity,
   PresentationLocation,
+  PresDescription,
+  PresentationFamily,
 };

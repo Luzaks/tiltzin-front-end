@@ -122,11 +122,23 @@ const Wrap = styled.div`
   font-size: 15px;
 `;
 
-const Know = styled.p`
+const Know = styled.button`
   font-size: 15px;
   height: fit-content;
+  width: 100px;
   font-weight: 900;
-  text-shadow: -2px -2px 2px rgba( 255, 255, 255, 0.1), 2px 2px 2px rgba( 0, 0, 0, 0.7);
+  color: #d9d9d9;
+  padding 5% 2.5%;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 1;
+  background-color: transparent;
+  border: 5px solid rgba(225, 225, 225, 0.9);
+  text-shadow: -2px -2px 2px rgba( 255,255,255,0.1),2px 2px 2px rgba( 0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.18);
 `;
 
 const SideBar = styled.div`
@@ -345,7 +357,7 @@ const PresentationLocation = styled.p`
 
 const PresDescription = styled.div`
   float: left;
-  text-align: left;
+  text-align: justify;
   padding-left: 4%;
   font-size: 18px;
 `;

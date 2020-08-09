@@ -4,10 +4,11 @@
 }
 
 .info-logo {
-  animation: App-logo-spin infinite 10s linear;
-  width: 25px;
-  height: 25px;
+  animation: Title-logo-spin infinite 10s linear;
+  width: 36px;
+  height: 36px;
   display: inline-block;
+  margin-right: 7px;
 }
 
 .arrows {
@@ -15,7 +16,7 @@
   height: 20px;;
 }
 
-@keyframes App-logo-spin {
+@keyframes Title-logo-spin {
   from {
     transform: rotate(0deg);
   }

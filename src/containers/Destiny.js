@@ -1,6 +1,6 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
 import { selectedCreator } from '../Redux/actions/actions';
 import {
   Details,
@@ -11,9 +11,11 @@ import {
   PresentationLocation,
   PresDescription,
   PresentationFamily,
+  PostTrip,
 } from '../styles/StyledComponents';
 import ReturnArrow from '../assets/imgs/left.png';
 import Dating from '../components/Dashboard/Destiny/Date';
+import postTrip from '../api/postTrip';
 
 const Destiny = ({ destiny }) => {
   const {
@@ -26,6 +28,15 @@ const Destiny = ({ destiny }) => {
     famdescription,
   } = destiny;
   const dispatch = useDispatch();
+  const userId = useSelector(state => state.loggedIn.user.id);
+  const destinyId = useSelector(state => state.selected.destiny.id);
+  const tripState = useSelector(state => state.trip.date);
+
+  const handleSubmit = ev => {
+    postTrip(userId, destinyId, tripState);
+    ev.preventDefault();
+  };
+
   return (
     <Details>
       <LeftHalf>
@@ -65,8 +76,11 @@ const Destiny = ({ destiny }) => {
         <PresDescription>
           { famdescription }
         </PresDescription>
-        <form>
+        <form onSubmit={ev => { handleSubmit(ev); }}>
           <Dating dispatch={dispatch} />
+          <button type="submit">
+            Book an appointment
+          </button>
         </form>
       </RightHalf>
       <Return

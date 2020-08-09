@@ -370,6 +370,10 @@ const PresentationFamily = styled.div`
   background-color: rgba(0, 0, 0, 0.1);
 `;
 
+const PostTrip = styled.button`
+  padding: 1px;
+`;
+
 export {
   NavBar,
   Title,
@@ -407,4 +411,5 @@ export {
   PresentationLocation,
   PresDescription,
   PresentationFamily,
+  PostTrip,
 };

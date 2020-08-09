@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import Routes from '../Router/Routes';
-import { logginCreator, destiniesCreator } from '../Redux/actions/actions';
+import { logginCreator, destiniesCreator, tripsCreator } from '../Redux/actions/actions';
 import getDestinies from '../api/getDestinies';
+import getTrips from '../api/getTrips';
 import '../styles/App.css';
 
 const mapStateToProps = state => ({ loggedIn: state.loggedIn });
@@ -12,9 +13,12 @@ const mapStateToProps = state => ({ loggedIn: state.loggedIn });
 function mapDispatchToProps(dispatch) {
   return {
     addLog: loggedIn => dispatch(logginCreator(loggedIn)),
-    handleGetData: destinies => {
+    handleGetDestinies: destinies => {
       dispatch(destiniesCreator(destinies));
     },
+    handleGetTrips: trips => {
+      dispatch(tripsCreator(trips));
+    }
   };
 }
 
@@ -50,12 +54,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { loggedIn, handleGetData } = this.props;
+    const { loggedIn, handleGetDestinies, handleGetTrips } = this.props;
 
     async function fetchData() {
       try {
         const destinies = await getDestinies();
-        handleGetData(destinies);
+        const trips = await getTrips();
+        handleGetDestinies(destinies);
+        handleGetTrips(trips);
       } catch (error) {
         // eslint-disable-next-line no-console
         console.log(error);
@@ -76,7 +82,8 @@ class App extends React.Component {
 App.propTypes = {
   loggedIn: PropTypes.objectOf(PropTypes.any).isRequired,
   addLog: PropTypes.func.isRequired,
-  handleGetData: PropTypes.func.isRequired,
+  handleGetDestinies: PropTypes.func.isRequired,
+  handleGetTrips: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

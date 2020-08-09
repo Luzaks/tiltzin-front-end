@@ -21,6 +21,7 @@ const initialState = {
   trip: {
     date: '',
   },
+  trips: [],
 };
 
 export default initialState;

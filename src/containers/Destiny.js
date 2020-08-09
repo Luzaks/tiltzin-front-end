@@ -65,7 +65,9 @@ const Destiny = ({ destiny }) => {
         <PresDescription>
           { famdescription }
         </PresDescription>
-        <Dating />
+        <form>
+          <Dating dispatch={dispatch} />
+        </form>
       </RightHalf>
       <Return
         onClick={() => {

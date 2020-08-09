@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DatePicker from 'react-datepicker';
+import { tripCreator } from '../../../Redux/actions/actions';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -21,6 +23,9 @@ class Dating extends React.Component {
 
   render() {
     const { startDate } = this.state;
+    const { dispatch } = this.props;
+    dispatch(tripCreator(startDate));
+
     return (
       <DatePicker
         selected={startDate}
@@ -29,5 +34,9 @@ class Dating extends React.Component {
     );
   }
 }
+
+Dating.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
 
 export default Dating;

@@ -18,6 +18,9 @@ const initialState = {
     active: false,
     destiny: {},
   },
+  trip: {
+    date: '',
+  },
 };
 
 export default initialState;

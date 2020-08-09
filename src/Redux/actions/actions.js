@@ -4,6 +4,7 @@ import {
   CLICKED_PAGE,
   CREATE_DESTINY,
   CREATE_SELECTED,
+  CREATE_DATE,
 } from './actionTypes';
 
 function userCreator(user) {
@@ -47,10 +48,20 @@ function selectedCreator(isActive, destinyObj) {
   };
 }
 
+function tripCreator(trip) {
+  return {
+    type: CREATE_DATE,
+    payload: {
+      date: trip,
+    },
+  };
+}
+
 export {
   userCreator,
   logginCreator,
   pagesCreator,
   destiniesCreator,
   selectedCreator,
+  tripCreator,
 };

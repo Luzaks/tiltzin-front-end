@@ -4,6 +4,7 @@ import loggedIn from './loggedInReducer';
 import pages from './pagesReducer';
 import destinies from './destiniesReducer';
 import selected from './selectedReducer';
+import trip from './tripReducer';
 
 const rootReducer = combineReducers({
   user,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   pages,
   destinies,
   selected,
+  trip,
 });
 
 export default rootReducer;

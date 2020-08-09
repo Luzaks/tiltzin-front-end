@@ -2,27 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { selectedCreator } from '../Redux/actions/actions';
-import { 
-  Details, 
+import {
+  Details,
   LeftHalf,
-  RightHalf, 
+  RightHalf,
   Return,
   PresentationCity,
   PresentationLocation,
   PresDescription,
   PresentationFamily,
- } from '../styles/StyledComponents';
+} from '../styles/StyledComponents';
 import ReturnArrow from '../assets/imgs/left.png';
+import Dating from '../components/Dashboard/Destiny/Date';
 
 const Destiny = ({ destiny }) => {
-  const { 
-    city, 
-    url, 
-    state, 
-    country, 
+  const {
+    city,
+    url,
+    state,
+    country,
     description,
     family,
-    famdescription } = destiny;
+    famdescription,
+  } = destiny;
   const dispatch = useDispatch();
   return (
     <Details>
@@ -42,9 +44,10 @@ const Destiny = ({ destiny }) => {
       <RightHalf>
         <PresentationCity>
           { city }
-        </PresentationCity> 
+        </PresentationCity>
         <PresentationLocation>
-          { state },
+          { state }
+          ,
           {' '}
           { country }
         </PresentationLocation>
@@ -55,11 +58,14 @@ const Destiny = ({ destiny }) => {
           { description }
         </PresDescription>
         <PresentationFamily>
-          Counselor family: {family}
+          Counselor family:
+          {' '}
+          {family}
         </PresentationFamily>
         <PresDescription>
           { famdescription }
         </PresDescription>
+        <Dating />
       </RightHalf>
       <Return
         onClick={() => {
@@ -74,6 +80,6 @@ const Destiny = ({ destiny }) => {
 
 Destiny.propTypes = {
   destiny: PropTypes.objectOf(PropTypes.any).isRequired,
-}
+};
 
 export default Destiny;

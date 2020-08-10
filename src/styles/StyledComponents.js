@@ -401,6 +401,15 @@ const AppCont = styled.div`
   height: 100%;
   display: flex;
   flex-dirention: column;
+  padding: 20px;
+`;
+
+const Appoint = styled.div`
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  float: left;
+  margin: 20px;
 `;
 
 export {
@@ -442,4 +451,5 @@ export {
   PresentationFamily,
   PostTrip,
   AppCont,
+  Appoint,
 };

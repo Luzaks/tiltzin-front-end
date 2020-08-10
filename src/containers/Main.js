@@ -13,6 +13,7 @@ const Main = ({ loggedInStatus }) => {
   const clicked = useSelector(state => state.pages.clicked);
   const destinies = useSelector(state => state.destinies);
   const selected = useSelector(state => state.selected);
+  const tripsState = useSelector(state => state.trips);
 
   return (
     <DashBoard>
@@ -23,7 +24,7 @@ const Main = ({ loggedInStatus }) => {
         <Footer />
       </SideBar>
       <Dashy>
-        { dashboardHelper(clicked, destinies, selected) }
+        { dashboardHelper(clicked, destinies, selected, tripsState) }
       </Dashy>
     </DashBoard>
   );

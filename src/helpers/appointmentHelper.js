@@ -1,10 +1,6 @@
-const dateExtract = date => {
-  return date.slice(0, 10);
-};
+const dateExtract = date => date.slice(0, 10);
 
-const timeExtract = date => {
-  return date.slice(11, 16);
-};
+const timeExtract = date => date.slice(11, 16);
 
 export {
   dateExtract,

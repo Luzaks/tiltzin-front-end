@@ -9,7 +9,7 @@ import Footer from '../components/Sidebar/Footer';
 import Pages from '../components/Sidebar/Pages';
 import dashboardHelper from '../helpers/dashboardHelper';
 
-const Main = ({ loggedInStatus }) => {
+const Main = ({ history }) => {
   const clicked = useSelector(state => state.pages.clicked);
   const destinies = useSelector(state => state.destinies);
   const selected = useSelector(state => state.selected);
@@ -17,10 +17,9 @@ const Main = ({ loggedInStatus }) => {
 
   return (
     <DashBoard>
-      {console.log(loggedInStatus)}
       <SideBar>
         <Tittle />
-        <Pages />
+        <Pages history={history} />
         <Footer />
       </SideBar>
       <Dashy>
@@ -31,7 +30,7 @@ const Main = ({ loggedInStatus }) => {
 };
 
 Main.propTypes = {
-  loggedInStatus: PropTypes.objectOf(PropTypes.any).isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Main;

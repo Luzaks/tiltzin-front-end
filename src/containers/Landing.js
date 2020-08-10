@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import { logginCreator } from '../Redux/actions/actions';
 import Register from '../components/auth/Registration';
 import Login from '../components/auth/Login';
@@ -21,7 +20,6 @@ class LandingPage extends Component {
       showed: '',
     };
     this.handleSuccesfullAuth = this.handleSuccesfullAuth.bind(this);
-    this.handleLogOut = this.handleLogOut.bind(this);
     this.showForm = this.showForm.bind(this);
   }
 
@@ -33,19 +31,6 @@ class LandingPage extends Component {
     };
     addLog(state);
     history.push('/dashboard');
-  }
-
-  handleLogOut() {
-    const { history, addLog } = this.props;
-    axios.delete('http://localhost:3001/logout', { withCredentials: true })
-      .then(() => {
-        const state = {
-          status: 'NOT_LOGGED_IN',
-          user: {},
-        };
-        addLog(state);
-        history.push('/');
-      }).catch(error => { console.log(error); });
   }
 
   showForm(formName) {
@@ -82,14 +67,6 @@ class LandingPage extends Component {
           {status}
         </p>
         { this.showForm(showed) }
-        <button
-          type="submit"
-          onClick={() => {
-            this.handleLogOut();
-          }}
-        >
-          Log out
-        </button>
       </div>
     );
   }
@@ -97,8 +74,8 @@ class LandingPage extends Component {
 
 LandingPage.propTypes = {
   loggedInStatus: PropTypes.objectOf(PropTypes.any).isRequired,
-  history: PropTypes.objectOf(PropTypes.any).isRequired,
   addLog: PropTypes.func.isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(LandingPage);

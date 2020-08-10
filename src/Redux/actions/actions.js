@@ -27,7 +27,7 @@ function pagesCreator(clickedPage) {
     type: CLICKED_PAGE,
     payload: {
       clicked: clickedPage,
-      pages: ['DESTINIES', 'APPOINTMENTS'],
+      pages: ['HOME', 'DESTINIES', 'APPOINTMENTS'],
     },
   };
 }

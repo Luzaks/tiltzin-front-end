@@ -43,6 +43,6 @@ const Pages = ({ history }) => {
 
 Pages.propTypes = {
   history: PropTypes.objectOf(PropTypes.any).isRequired,
-}
+};
 
 export default Pages;

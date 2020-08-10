@@ -10,8 +10,8 @@ const initialState = {
     user: {},
   },
   pages: {
-    clicked: 'none',
-    pages: ['DESTINIES', 'APPOINTMENTS'],
+    clicked: 'HOME',
+    pages: ['HOME', 'DESTINIES', 'APPOINTMENTS'],
   },
   destinies: [],
   selected: {

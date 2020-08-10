@@ -91,7 +91,7 @@ const DestinyWrap = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(220, 208, 255, 0.3);
+  background-color: rgba(50, 23, 77, 0.35)
 `;
 
 const DestinyInfo = styled.div`
@@ -155,12 +155,13 @@ const SideBar = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items:center;
+  border-right: 3px solid rgba(0, 0, 0, 0.1);
 `;
 
 const PagesConatiner = styled.div`
   width: 100%;
   height: 72.5%;
-  padding-top: 50%;
+  padding-top: 20%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -311,7 +312,6 @@ const LeftHalf = styled.div`
 const RightHalf = styled.div`
   width: 35%;
   height: 100%;
-  background-color: rgba(225,225,225,0.3);
   padding: 7% 3% 0 0;
   letter-spacing: 0.5px;
 `;
@@ -401,7 +401,6 @@ const AppCont = styled.div`
   display: flex;
   flex-dirention: column;
   padding: 20px;
-  background-color: rgba(225,225,225,0.3);
 `;
 
 const Appoint = styled.div`
@@ -416,6 +415,41 @@ const Appoint = styled.div`
   font-family: Typographica;
   font-weight: 900;
   color: #71706e;
+`;
+
+const HomeCont = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const HomeHeader = styled.span`
+  font-family: Typographica;
+  font-size: 34px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+`;
+
+const HomeSubHeader = styled.span`
+  font-family: Choppers;
+  font-size: 38px;
+  margin-left: 4px;
+`;
+
+const HomeSlogan = styled.span`
+  font-family: MeganJune;
+  font-size: 20px;
+  margin: 7px 0;
+`;
+
+const HomeDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: MeganJune;
+  text-align: center;
 `;
 
 export {
@@ -458,4 +492,9 @@ export {
   PostTrip,
   AppCont,
   Appoint,
+  HomeCont,
+  HomeHeader,
+  HomeSubHeader,
+  HomeSlogan,
+  HomeDescription,
 };

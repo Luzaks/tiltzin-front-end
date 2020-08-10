@@ -307,7 +307,6 @@ const RightHalf = styled.div`
   height: 100%;
   background-color: rgba(225,225,225,0.3);
   padding: 7% 3% 0 0;
-  font-family: ImSpiegelland;
   letter-spacing: 0.5px;
 `;
 
@@ -356,6 +355,7 @@ const PresentationLocation = styled.p`
 `;
 
 const PresDescription = styled.div`
+  font-family: MeganJune;
   float: left;
   text-align: justify;
   padding-left: 4%;
@@ -363,15 +363,30 @@ const PresDescription = styled.div`
 `;
 
 const PresentationFamily = styled.div`
+  font-family: MeganJune;
   float: left;
   text-align: left;
   padding: 0 4%;
+  margin: 3% 0;
   font-size: 18px;
   background-color: rgba(0, 0, 0, 0.1);
 `;
 
 const PostTrip = styled.button`
-  padding: 1px;
+  padding: 3% 6%;
+  margin-top: 5%;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #59daae;
+  color: white;
+  font-weight: 900;
+  transition: transform ease-in 0.1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
 `;
 
 export {

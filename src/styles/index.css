@@ -16,6 +16,12 @@
   url('../assets/fonts/ImSpiegelland.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'MeganJune';
+  src: local('MeganJune'),
+  url('../assets/fonts/MeganJune.ttf') format('truetype');
+}
+
 html,
 body {
   margin: 0;

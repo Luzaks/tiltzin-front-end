@@ -28,6 +28,7 @@ class Dating extends React.Component {
 
     return (
       <DatePicker
+        className="date-picker"
         selected={startDate}
         onChange={this.handleChange}
       />

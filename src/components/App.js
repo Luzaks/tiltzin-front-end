@@ -18,7 +18,7 @@ function mapDispatchToProps(dispatch) {
     },
     handleGetTrips: trips => {
       dispatch(tripsCreator(trips));
-    }
+    },
   };
 }
 

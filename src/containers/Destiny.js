@@ -76,11 +76,17 @@ const Destiny = ({ destiny }) => {
         <PresDescription>
           { famdescription }
         </PresDescription>
-        <form onSubmit={ev => { handleSubmit(ev); }}>
+        <PresentationFamily>
+          Book an appointment
+        </PresentationFamily>
+        <PresDescription>
+          You only have to choose a date and click  in the button below.
+        </PresDescription>
+        <form className="date-form" onSubmit={ev => { handleSubmit(ev); }}>
           <Dating dispatch={dispatch} />
-          <button type="submit">
-            Book an appointment
-          </button>
+          <PostTrip type="submit">
+            Reserve now
+          </PostTrip>
         </form>
       </RightHalf>
       <Return

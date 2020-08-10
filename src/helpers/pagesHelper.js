@@ -1,5 +1,4 @@
 import React from 'react';
-import { Holdable } from 'react-touch';
 import { pagesCreator } from '../Redux/actions/actions';
 import { PagesLink } from '../styles/StyledComponents';
 

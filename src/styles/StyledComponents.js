@@ -124,11 +124,10 @@ const Wrap = styled.div`
 
 const Know = styled.button`
   font-size: 15px;
-  height: fit-content;
-  width: 100px;
+  height: 40px;
+  width: 130px;
   font-weight: 900;
   color: #d9d9d9;
-  padding 5% 2.5%;
   outline: none;
   display: flex;
   justify-content: center;
@@ -136,9 +135,17 @@ const Know = styled.button`
   cursor: pointer;
   opacity: 1;
   background-color: transparent;
-  border: 5px solid rgba(225, 225, 225, 0.9);
   text-shadow: -2px -2px 2px rgba( 255,255,255,0.1),2px 2px 2px rgba( 0,0,0,0.7);
   background-color: rgba(0, 0, 0, 0.18);
+  transition: transform ease-in 0.1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+  padding: 3% 6%;
+  border-radius: 20px;
 `;
 
 const SideBar = styled.div`
@@ -389,6 +396,13 @@ const PostTrip = styled.button`
   }
 `;
 
+const AppCont = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-dirention: column;
+`;
+
 export {
   NavBar,
   Title,
@@ -427,4 +441,5 @@ export {
   PresDescription,
   PresentationFamily,
   PostTrip,
+  AppCont,
 };

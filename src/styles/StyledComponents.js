@@ -155,7 +155,6 @@ const SideBar = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items:center;
-  background-color: rgba(225,225,225,0.3);
 `;
 
 const PagesConatiner = styled.div`
@@ -402,14 +401,21 @@ const AppCont = styled.div`
   display: flex;
   flex-dirention: column;
   padding: 20px;
+  background-color: rgba(225,225,225,0.3);
 `;
 
 const Appoint = styled.div`
   width: 150px;
   height: 150px;
-  background-color: red;
   float: left;
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Typographica;
+  font-weight: 900;
+  color: #71706e;
 `;
 
 export {

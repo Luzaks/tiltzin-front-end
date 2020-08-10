@@ -2,6 +2,32 @@
   background-image: url("../assets/imgs/landing.jpg");
 }
 
+.not-logged {
+  background-image: url("../assets/imgs/26671.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.not-logged-container {
+  width: 75%;
+  height: 75%;
+  border: 8px black solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-link {
+  margin-top: 5%;
+  color: black;
+}
+
 .auth-form {
   display: flex;
   flex-direction: column;

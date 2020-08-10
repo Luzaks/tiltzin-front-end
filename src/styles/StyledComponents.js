@@ -109,6 +109,7 @@ const DestinyInfo = styled.div`
   text-shadow: -2px -2px 2px rgba( 255, 255, 255, 0.1), 2px 2px 2px rgba( 0, 0, 0, 0.7);
   width: fit-content;
   height: fit-content;
+  font-family: Typographica;
 `;
 
 const Wrap = styled.div`
@@ -124,6 +125,7 @@ const Wrap = styled.div`
 
 const Know = styled.button`
   font-size: 15px;
+  font-family: Typographica;
   height: 40px;
   width: 130px;
   font-weight: 900;
@@ -348,7 +350,7 @@ const PresentationCity = styled.h1`
   font-size: 38px;
   font-weight: 900;
   text-align: right;
-  text-shadow: 3px 2px 3px #dcd0ff;
+  font-family: Typographica;
 `;
 
 const PresentationLocation = styled.p`
@@ -358,6 +360,7 @@ const PresentationLocation = styled.p`
   font-size: 22px;
   font-weight: 900;
   text-align: right;
+  font-family: Typographica;
 `;
 
 const PresDescription = styled.div`
@@ -452,6 +455,12 @@ const HomeDescription = styled.div`
   text-align: center;
 `;
 
+const AuthCont = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+`;
+
 export {
   NavBar,
   Title,
@@ -497,4 +506,5 @@ export {
   HomeSubHeader,
   HomeSlogan,
   HomeDescription,
+  AuthCont,
 };

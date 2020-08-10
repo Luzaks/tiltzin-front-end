@@ -14,6 +14,7 @@ const Home = ({ user }) => {
     <HomeCont>
       <HomeHeader>
         Hello
+        {' '}
         {username}
         {' '}
         welcome to

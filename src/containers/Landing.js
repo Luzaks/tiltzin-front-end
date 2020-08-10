@@ -54,18 +54,12 @@ class LandingPage extends Component {
   }
 
   render() {
-    const { loggedInStatus } = this.props;
-    const { status } = loggedInStatus;
     const { showed } = this.state;
     return (
       <div className="landing-container">
         <NavigationBar
           onClick={ev => this.setState({ showed: ev.target.textContent })}
         />
-        <p>
-          Status:
-          {status}
-        </p>
         { this.showForm(showed) }
       </div>
     );
@@ -73,7 +67,6 @@ class LandingPage extends Component {
 }
 
 LandingPage.propTypes = {
-  loggedInStatus: PropTypes.objectOf(PropTypes.any).isRequired,
   addLog: PropTypes.func.isRequired,
   history: PropTypes.objectOf(PropTypes.any).isRequired,
 };

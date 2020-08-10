@@ -27,7 +27,7 @@ const Routes = ({ loggedInStatus }) => {
           exact
           path="/"
           render={props => (
-            <Landing {...props} loggedInStatus={loggedInStatus} />
+            <Landing {...props} />
           )}
         />
         {checkLoggin(loggedInStatus.status)}

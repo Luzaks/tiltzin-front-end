@@ -2,9 +2,12 @@ import styled from 'styled-components';
 
 const NavBar = styled.nav`
   width: 100%;
-  height: 40px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
 `;
 
 const TitleCont = styled.div`
@@ -48,7 +51,8 @@ const Brand = styled.span`
 const Button = styled.button`
   border: none;
   color: white;
-  font-size: 14px;
+  font-family: Typographica;
+  font-size: 16px;
   font-weight: 900;
   background-color: transparent;
   margin: 0 5px;
@@ -59,17 +63,10 @@ const Button = styled.button`
   }
 `;
 
-const AuthContainer = styled.div`
-  width: calc(100% + 50px);
-  height: calc(100% + 49px);
-  position: relative;
-  left: -25px;
-  top: -86px;
-  background-color: rgba(255,255,255,0.5);
-`;
-
 const CircleButton = styled.button`
   border-radius: 100%;
+  width: 30px;
+  height: 30px;
   color: white;
   font-weight: 900;
   display: flex;
@@ -78,6 +75,11 @@ const CircleButton = styled.button`
   padding: 2px;
   border: none;
   background-color: none;
+  cursor: pointer;
+  background-color: black;
+  position: absolute;
+  top: 10%;
+  left: 18%;
 `;
 
 const DashBoard = styled.div`
@@ -458,7 +460,15 @@ const HomeDescription = styled.div`
 const AuthCont = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 5%;
+  height: calc(100% - 100px);
+  width: 100%;
+`;
+
+const AuthHeader = styled.h1`
+  color: black;
 `;
 
 export {
@@ -469,7 +479,6 @@ export {
   Span,
   Brand,
   Button,
-  AuthContainer,
   CircleButton,
   DashBoard,
   SideBar,
@@ -507,4 +516,5 @@ export {
   HomeSlogan,
   HomeDescription,
   AuthCont,
+  AuthHeader,
 };

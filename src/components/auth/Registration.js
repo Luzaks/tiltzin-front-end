@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { userCreator } from '../../Redux/actions/actions';
-import { AuthContainer, CircleButton } from '../../styles/StyledComponents';
+import { AuthCont, CircleButton, AuthHeader } from '../../styles/StyledComponents';
 
 const Registration = ({ handleSuccesfullAuth, onClick }) => {
   const dispatch = useDispatch();
@@ -44,9 +44,10 @@ const Registration = ({ handleSuccesfullAuth, onClick }) => {
   }
 
   return (
-    <AuthContainer>
-      <form onSubmit={handleSubmit}>
+    <AuthCont>
+      <form className="auth-form" onSubmit={handleSubmit}>
         <CircleButton onClick={onClick}>X</CircleButton>
+        <AuthHeader>Sign up</AuthHeader>
         <input
           type="text"
           id="username"
@@ -95,9 +96,9 @@ const Registration = ({ handleSuccesfullAuth, onClick }) => {
           }}
           required
         />
-        <button type="submit">Register</button>
+        <button className="submit-btn" type="submit">Register</button>
       </form>
-    </AuthContainer>
+    </AuthCont>
   );
 };
 

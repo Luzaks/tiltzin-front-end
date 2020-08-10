@@ -1,6 +1,50 @@
 .landing-container {
-  background-color:rgba(50, 23, 77, 1.0);
-  padding: 25px;
+  background-image: url("../assets/imgs/landing.jpg");
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: fit-content;
+  align-items: center;
+  position: absolute;
+  background-color: #a0fefd;
+  padding: 6% 0;
+  font-family: Typographica;
+  letter-spacing: 2px;
+}
+
+.username, 
+.email,
+.password,
+.password_confirmation {
+  padding-left: 8px;
+}
+
+.username, 
+.email,
+.password,
+.password_confirmation,
+.submit-btn  {
+  width: 70%;
+  margin-top: 4%;
+  height: 35px;
+  border-radius: 30px;
+  background-color: transparent;
+  border-color: black aqua aqua black
+}
+
+.submit-btn {
+  width: 22%;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-weight: 900;
+}
+
+.submit-btn:hover {
+  background-color: transparent;
 }
 
 .info-logo {

@@ -1,68 +1,129 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# :hibiscus: Tiltzin - React-Redux / Rails Final Capstone Project :hibiscus:
+
+[<p align="center">Live Version</p>](https://tiltzin.herokuapp.com/)
+
+## 📝 Table of Contents
+
+* [About the Project](#-about-the-project)
+  * [Tiltzin](#-tiltzin)
+    * [Landing](#-landing)
+    * [Dashboard](#-dashboard)
+    * [What to expect in the future](#-what-to-expect-in-the-future)
+* [Getting Started](#-getting-started)
+* [Available Scripts](#-available-scripts)
+* [Built With](#built-with)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
+
+<!-- ABOUT THE PROJECT -->
+## 👉 About The Project
+
+This is the Final Capstone Project for Microverse Complete Technical Curriculum. The implementation was completely built with  React, using the [Create React App](https://github.com/facebook/create-react-app) command, and with Redux architecture, for managing the internal state of the applicacion.
+
+The purpose of the project is to follow a industry standards and present a complete application for booking appointments with the given design and requirements for its behaviour.
+In order to achieve it we should implement the best practices learned throught the program.
+
+The complete project's assignment can be seen [here](https://www.notion.so/Final-Capstone-Project-Book-an-Appointment-41ded2ee99ff4fe4becf91acb332ca26).
+
+The link for the back end repository can be found [here](https://github.com/Luzaks/tiltzin-api).
+
+## 👉 Tiltzin
+
+Tiltzin is my proposal for the required assignments, it tries to be a tourism agency but wants to be something more, its an application that allows you to connect with indigenous and ethnic people in order to be a responsible traveller, and/or tourist, with the natural environment and culture of the touristic place, you can reserve a day for meeting a family that belongs to the culture heritage of the area, and the family will be responsible of the lead activies booked for that destiny.
+
+The style and desgin of the page was made thinking in the colors that represents the imaginery of indigenous ethnic groups of people in Mexico, but at the same time, it mix a much more modern approach in order to make it attractive to the eye.
+
+### 👉 Landing Page
+
+In Tiltztin you need to sign up or sign in the same as you regularly do it in normal applications, a form will be displayed if you click on the Sign in or in Sign up link in the navigation bar of the landing page.
+    
+<div align="center"><img src="./src/assets/imgs/tiltzin_loggin.png" alt="tiltzin-sample"></div>
+
+<div align="center"><img src="./src/assets/imgs/tiltzin_singup.png" alt="tiltzin-sample"></div>
+
+### 👉 Tiltzin Dashboard
+
+After joining in Tiltzin you'll se the dashboard with different pages that you can click on.
+
+You'll be received with the Home page, with a welcome message and instructions for navigating throught the dashboard.
+
+<div align="center"><img src="./src/assets/imgs/tiltzin_home.png" alt="tiltzin-sample"></div>
+
+If you click the the destinies button, all the destinies registered in Tiltzin will be display in a slider, you can go to the left or the right as you please, looking at the photographs of our destinies.
+
+<div align="center"><img src="./src/assets/imgs/tiltzin_destinies.png" alt="tiltzin-sample"></div>
+
+By clicking in the know more button of every destiny you can see the details of the activies and reserve a day for the activities.
+
+<div align="center"><img src="./src/assets/imgs/tiltzin_details.png" alt="tiltzin-sample"></div>
+
+In the acchievvements section all the reserved days from all of the users will be displayed.
+
+<div align="center"><img src="./src/assets/imgs/tiltzin_appointment.png" alt="tiltzin-sample"></div>
+
+### What to expect in the future
+
+Right now, as is it made, Tiltzin lacks of a sessions proper storage due to a problem with the domain name, you have to sign in everytime you reload the page, this problem will be fixed in the future, once the domain is available.
+
+The same problem persists in the appointments sections, once the problem with the sessions is resolved, the appointments will be filtered only for the current user logged in.
+
+## Getting started
+
+*   Click on the green button, in the repository. 
+*   Add the following commands in your favorite bash:
+```
+git clone [copied text]
+cd [repo name]
+npm i
+npm start
+```
+
+A tab will be opened in your default browser.
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run, in your favorite bash:
 
-### `yarn start`
+1.- For activate the web-server watcher `./bin/webpack-dev-server`
 
-Runs the app in the development mode.<br />
+2.- For starting the web-server `npm start`
+
+3.- For installing dependencies `npm i`
+
+4.- Outside the web-server, for running tests `npm test`
+
+For running the app in the development mode after following the steps number 2 and 3.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+### 🛠 Built With
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*   React.js 
+*   Redux
+*   Redux Dev Tools
+*   React-Router-Dom
+*   Axios
+*   JSX
+*   Styled Components
+*   Prop-Types
+*   CSS
+*   Heroku
+*   ES6
+*   npm
+*   Eslint
+*   [NASA Open Apis](https://api.nasa.gov/)
 
-### `yarn build`
+<!-- CONTACT & SUPPORT -->
+## Contact & Support
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🙍 Guadalupe Rangel - kanemekanik@gmail.com - ☄
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+You liked it? ⭐️ Star the project!!!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Any comment that you want to send I'll be happy to receive it.
 
-### `yarn eject`
+## Acknowledgments
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Microverse](https://www.microverse.org/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is for learning purposes. I don't own any image presented here.

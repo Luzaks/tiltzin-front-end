@@ -11,7 +11,7 @@ const Pages = ({ history }) => {
   const dispatch = useDispatch();
 
   const handleLogOut = () => {
-    axios.delete('http://localhost:3001/logout', { withCredentials: true })
+    axios.delete('https://fierce-taiga-99651.herokuapp.com/logout', { withCredentials: true })
       .then(() => {
         const state = {
           status: 'NOT_LOGGED_IN',

@@ -1,25 +1,29 @@
 @font-face {
   font-family: 'Typographica';
-  src: local('Typographica'),
-  url('../assets/fonts/Typographica.ttf') format('truetype');
+  src:
+    local('Typographica'),
+    url('../assets/fonts/Typographica.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Choppers';
-  src: local('Choppers'),
-  url('../assets/fonts/Choppers.ttf') format('truetype');
+  src:
+    local('Choppers'),
+    url('../assets/fonts/Choppers.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'ImSpiegelland';
-  src: local('ImSpiegelland'),
-  url('../assets/fonts/ImSpiegelland.ttf') format('truetype');
+  src:
+    local('ImSpiegelland'),
+    url('../assets/fonts/ImSpiegelland.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'MeganJune';
-  src: local('MeganJune'),
-  url('../assets/fonts/MeganJune.ttf') format('truetype');
+  src:
+    local('MeganJune'),
+    url('../assets/fonts/MeganJune.ttf') format('truetype');
 }
 
 html,
@@ -59,10 +63,10 @@ body * {
   transition: all 500ms ease-in-out;
   box-sizing: border-box;
   margin: 0;
-  padding:  0;
+  padding: 0;
 }
 
-#root, 
+#root,
 .App,
 .landing-container {
   width: inherit;

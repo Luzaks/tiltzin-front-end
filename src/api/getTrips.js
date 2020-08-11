@@ -1,5 +1,5 @@
 const getTrips = async () => {
-  const result = await fetch('http://localhost:3001/list');
+  const result = await fetch('https://fierce-taiga-99651.herokuapp.com/list');
   const data = await result.json();
 
   return data;

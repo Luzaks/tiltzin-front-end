@@ -37,28 +37,28 @@
   position: absolute;
   background-color: #a0fefd;
   padding: 6% 0;
-  font-family: Typographica;
+  font-family: Typographica, sans-serif;
   letter-spacing: 2px;
 }
 
-.username, 
+.username,
 .email,
 .password,
 .password_confirmation {
   padding-left: 8px;
 }
 
-.username, 
+.username,
 .email,
 .password,
 .password_confirmation,
-.submit-btn  {
+.submit-btn {
   width: 70%;
   margin-top: 4%;
   height: 35px;
   border-radius: 30px;
   background-color: transparent;
-  border-color: black aqua aqua black
+  border-color: black aqua aqua black;
 }
 
 .submit-btn {
@@ -95,13 +95,13 @@
 }
 
 .react-datepicker__input-container,
-.date-picker  {
+.date-picker {
   width: 100%;
 }
 
 .arrows {
   width: 20px;
-  height: 20px;;
+  height: 20px;
 }
 
 .appoint-container {
@@ -119,6 +119,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

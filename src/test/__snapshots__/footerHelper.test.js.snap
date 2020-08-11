@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the rendering footer helper Icons .: 
+     <img src={'../assets/imgs/twitter.png'} alt="icon" />
+   1`] = `
+<ForwardRef(styled.img)
+  alt="icon"
+  className="social-icons"
+  src="twitter.png"
+/>
+`;

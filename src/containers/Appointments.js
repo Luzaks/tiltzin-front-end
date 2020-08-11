@@ -1,24 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import getTrips from '../api/getTrips';
 import Appointment from '../components/Dashboard/Appointments/Appointment';
-import { AppCont } from '../styles/StyledComponents';
-import Maya from '../assets/imgs/maya.png';
+import { tripsCreator } from '../Redux/actions/actions';
 
-const Appointments = ({ trips }) => (
-  <AppCont
-    style={{
-      backgroundImage: `url(${Maya})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPositionX: '75%',
-    }}
-  >
-    {trips.map(trip => (<Appointment key={trip.destiny} date={trip.date} />))}
-  </AppCont>
-);
+const Appointments = () => {
+  const dispatch = useDispatch();
+  async function fetchData() {
+    try {
+      const trips = await getTrips();
 
-Appointments.propTypes = {
-  trips: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
+      dispatch(tripsCreator(trips));
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error);
+    }
+  }
+  fetchData();
+  const tripsState = useSelector(state => state.trips);
+  return (
+    <div className="appoint-container">
+      {tripsState.map(trip => (<Appointment key={trip.destiny} date={trip.date} />))}
+    </div>
+  );
 };
 
 export default Appointments;

@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { logginCreator } from '../../Redux/actions/actions';
+import { logginCreator, pagesCreator } from '../../Redux/actions/actions';
 import { PagesConatiner, PagesLink } from '../../styles/StyledComponents';
 import pagesHelper from '../../helpers/pagesHelper';
 
@@ -19,7 +19,11 @@ const Pages = ({ history }) => {
         };
         dispatch(logginCreator(state));
         history.push('/');
-      }).catch(error => { console.log(error); });
+      }).catch(error => {
+        // eslint-disable-next-line no-console
+        console.log(error);
+      });
+    dispatch(pagesCreator('HOME'));
   };
 
   return (

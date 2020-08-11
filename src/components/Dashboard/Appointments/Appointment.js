@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { dateExtract, timeExtract } from '../../../helpers/appointmentHelper';
+import { dateExtract } from '../../../helpers/appointmentHelper';
 import { Appoint } from '../../../styles/StyledComponents';
 
 const Appointment = ({ date }) => (
   <Appoint>
     <span>
-      {dateExtract(date)}
+      Date for:
     </span>
-    {' '}
     <span>
-      {timeExtract(date)}
+      {dateExtract(date)}
     </span>
   </Appoint>
 );

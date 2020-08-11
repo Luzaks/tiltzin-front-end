@@ -7,11 +7,8 @@ const postTrip = async (userId, destinyId, date) => {
       destiny_id: parseInt(destinyId, 10),
       date,
     },
-    { withCredentials: true }).then(r => {
-    if (r) {
-      console.log(r);
-    }
-  }).catch(error => {
+    { withCredentials: true }).then(r => r).catch(error => {
+    // eslint-disable-next-line no-console
     console.log(error);
   });
 };

@@ -35,9 +35,9 @@ const Login = ({ handleSuccesfullAuth, onClick }) => {
       { withCredentials: true }).then(r => {
       if (r.data.logged_in) {
         handleSuccesfullAuth(r.data);
-        console.log(r.data);
       }
     }).catch(error => {
+      // eslint-disable-next-line no-console
       console.log(error);
     });
     ev.preventDefault();

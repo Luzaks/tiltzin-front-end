@@ -12,6 +12,7 @@ const Routes = ({ loggedInStatus }) => {
         exact
         path="/dashboard"
         render={props => (
+          // eslint-disable-next-line react/jsx-props-no-spreading
           <Main {...props} loggedInStatus={loggedInStatus} />
         )}
       />
@@ -28,6 +29,7 @@ const Routes = ({ loggedInStatus }) => {
           exact
           path="/"
           render={props => (
+            // eslint-disable-next-line react/jsx-props-no-spreading
             <Landing {...props} />
           )}
         />

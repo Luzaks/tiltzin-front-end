@@ -33,11 +33,11 @@ const Registration = ({ handleSuccesfullAuth, onClick }) => {
         },
       },
       { withCredentials: true }).then(r => {
-      console.log(r);
       if (r.data.status === 'created') {
         handleSuccesfullAuth(r.data);
       }
     }).catch(error => {
+      // eslint-disable-next-line no-console
       console.log(error);
     });
     ev.preventDefault();

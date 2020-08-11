@@ -175,12 +175,12 @@ const PagesConatiner = styled.div`
 const PagesLink = styled.div`
   width: 75%;
   height: 38px;
-  background-color: #59daae;
+  background-color: #a0fefd;
   margin: 10px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: white;
+  color: black;
   font-weight: 900;
   padding-left: 14px;
   font-size: 13px;
@@ -243,7 +243,7 @@ const Right = styled.button`
   height: 50px;
   width: 50px;
   justify-content: center;
-  background: #59daae;
+  background: #a0fefd;
   border-radius: 50%;
   cursor: pointer;
   align-items: center;
@@ -269,7 +269,7 @@ const Left = styled.button`
   height: 50px;
   width: 50px;
   justify-content: center;
-  background: #59daae;
+  background: #a0fefd;
   border-radius: 50%;
   cursor: pointer;
   align-items: center;
@@ -328,7 +328,7 @@ left: 25px;
 height: 50px;
 width: 50px;
 justify-content: center;
-background: #59daae;
+background: #a0fefd;
 border-radius: 50%;
 cursor: pointer;
 align-items: center;
@@ -388,8 +388,8 @@ const PostTrip = styled.button`
   margin-top: 5%;
   border-radius: 20px;
   cursor: pointer;
-  background-color: #59daae;
-  color: white;
+  background-color: #a0fefd;
+  color: black;
   font-weight: 900;
   transition: transform ease-in 0.1s;
   &:hover {
@@ -398,14 +398,6 @@ const PostTrip = styled.button`
   &:active {
     transform: scale(0.9);
   }
-`;
-
-const AppCont = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-dirention: column;
-  padding: 20px;
 `;
 
 const Appoint = styled.div`
@@ -508,7 +500,6 @@ export {
   PresDescription,
   PresentationFamily,
   PostTrip,
-  AppCont,
   Appoint,
   HomeCont,
   HomeHeader,

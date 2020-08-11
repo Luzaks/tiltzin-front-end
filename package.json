@@ -11,6 +11,8 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
     "jquery": "^3.5.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -22,6 +24,7 @@
     "react-touch": "^0.4.4",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
+    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.1"
   },

@@ -31,17 +31,17 @@ const initialState = {
   trips: [],
 };
 const mockStore = configureMockStore();
-const store = mockStore({initialState});
-configure({adapter: new Adapter()});
+const store = mockStore({ initialState });
+configure({ adapter: new Adapter() });
 
-describe("App Component", () => {
-  it("should render without throwing an error", () => {
-      expect(
-          shallow(
-              <Provider store={store}>
-                  <App />
-              </Provider>
-          ).exists(<span class="sc-AxhUy hdSVIO">tiltzin</span>)
-      ).toBe(false);
+describe('App Component', () => {
+  it('should render without throwing an error', () => {
+    expect(
+      shallow(
+        <Provider store={store}>
+          <App />
+        </Provider>,
+      ).exists(<span className="sc-AxhUy hdSVIO">tiltzin</span>),
+    ).toBe(false);
   });
 });

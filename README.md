@@ -1,4 +1,4 @@
-# :hibiscus: Tiltzin - React-Redux / Rails Final Capstone Project :hibiscus:
+# :hibiscus: Tiltzin - Final Capstone Project :hibiscus:
 
 [<p align="center">Live Version</p>](https://tiltzin.herokuapp.com/)
 
@@ -121,7 +121,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 *   ES6
 *   npm
 *   Eslint
-*   [NASA Open Apis](https://api.nasa.gov/)
 
 <!-- CONTACT & SUPPORT -->
 ## Contact & Support

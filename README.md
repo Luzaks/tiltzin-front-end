@@ -29,7 +29,7 @@ The link for the back end repository can be found [here](https://github.com/Luza
 
 ## 👉 Tiltzin
 
-Tiltzin is my proposal for the required assignments, it tries to be a tourism agency but wants to be something more, its an application that allows you to connect with indigenous and ethnic people in order to be a responsible traveller, and/or tourist, with the natural environment and culture of the touristic place, you can reserve a day for meeting a family that belongs to the culture heritage of the area, and the family will be responsible of the lead activies booked for that destiny.
+Tiltzin is an applications por medium screens and large screens, it's layout works up 650px, it tries to be a tourism agency but wants to be something more, its an application that allows you to connect with indigenous and ethnic people in order to be a responsible traveller, and/or tourist, with the natural environment and culture of the desired destiny, you can reserve a day for meeting and a family that belongs to the culture heritage of the area will be responsible of the lead activies booked for that destiny.
 
 The style and desgin of the page was made thinking in the colors that represents the imaginery of indigenous ethnic groups of people in Mexico, but at the same time, it mix a much more modern approach in order to make it attractive to the eye.
 
@@ -75,7 +75,7 @@ In the achievements section all the reserved days from all of the users will be 
 
 Right now, as is it made, Tiltzin lacks of a sessions proper storage due to a problem with the domain name, you have to sign in everytime you reload the page, this problem will be fixed in the future, once the domain is available.
 
-The same problem persists in the appointments sections, once the problem with the sessions is resolved, the appointments will be filtered only for the current user logged in.
+The same problem persists in the appointments sections, once the problem with the sessions is resolved, the appointments will be filtered only for the current user that logged in.
 
 ## Getting started
 

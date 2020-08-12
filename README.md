@@ -29,7 +29,7 @@ The link for the back end repository can be found [here](https://github.com/Luza
 
 ## 👉 Tiltzin
 
-Tiltzin is an applications por medium screens and large screens, it's layout works up 650px, it tries to be a tourism agency but wants to be something more, its an application that allows you to connect with indigenous and ethnic people in order to be a responsible traveller, and/or tourist, with the natural environment and culture of the desired destiny, you can reserve a day for meeting and a family that belongs to the culture heritage of the area will be responsible of the lead activies booked for that destiny.
+Tiltzin is an application por medium and large screens, it's layout works up 650px, it tries to be a tourism agency but wants to be something more, its an application that allows you to connect with indigenous and ethnic people in order to be a responsible traveller, and/or tourist, with the natural environment and culture of the desired destiny, you can reserve a day for meeting and a family that belongs to the culture heritage of the area will be responsible of the lead activies booked for that destiny.
 
 The style and desgin of the page was made thinking in the colors that represents the imaginery of indigenous ethnic groups of people in Mexico, but at the same time, it mix a much more modern approach in order to make it attractive to the eye.
 

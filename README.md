@@ -20,8 +20,8 @@
 
 This is the Final Capstone Project for Microverse Complete Technical Curriculum. The implementation was completely built with  React, using the [Create React App](https://github.com/facebook/create-react-app) command, and with Redux architecture, for managing the internal state of the applicacion.
 
-The purpose of the project is to follow a industry standards and present a complete application for booking appointments with the given design and requirements for its behaviour.
-In order to achieve it we should implement the best practices learned throught the program.
+The purpose of the project is to follow industry standards and present a complete application for booking appointments with the given design and requirements for its behaviour. As well we should choose a nice to have requirement, for Tiltzin I choose to work on transitions for making the user experience better, and in general, I worked in the front end design, as well as in the user authentication.
+In order to achieve all of this we should implement the best practices learned throught the program.
 
 The complete project's assignment can be seen [here](https://www.notion.so/Final-Capstone-Project-Book-an-Appointment-41ded2ee99ff4fe4becf91acb332ca26).
 
@@ -36,10 +36,12 @@ The style and desgin of the page was made thinking in the colors that represents
 ### 👉 Landing Page
 
 In Tiltztin you need to sign up or sign in the same as you regularly do it in normal applications, a form will be displayed if you click on the Sign in or in Sign up link in the navigation bar of the landing page.
+
     
 <div align="center"><img src="./src/assets/imgs/tiltzin_loggin.png" alt="tiltzin-sample"></div>
 
 <div align="center"><img src="./src/assets/imgs/tiltzin_singup.png" alt="tiltzin-sample"></div>
+
 
 ### 👉 Tiltzin Dashboard
 
@@ -47,19 +49,27 @@ After joining in Tiltzin you'll se the dashboard with different pages that you c
 
 You'll be received with the Home page, with a welcome message and instructions for navigating throught the dashboard.
 
+
 <div align="center"><img src="./src/assets/imgs/tiltzin_home.png" alt="tiltzin-sample"></div>
+
 
 If you click the the destinies button, all the destinies registered in Tiltzin will be display in a slider, you can go to the left or the right as you please, looking at the photographs of our destinies.
 
+
 <div align="center"><img src="./src/assets/imgs/tiltzin_destinies.png" alt="tiltzin-sample"></div>
+
 
 By clicking in the know more button of every destiny you can see the details of the activies and reserve a day for the activities.
 
+
 <div align="center"><img src="./src/assets/imgs/tiltzin_details.png" alt="tiltzin-sample"></div>
 
-In the acchievvements section all the reserved days from all of the users will be displayed.
+
+In the achievements section all the reserved days from all of the users will be displayed.
+
 
 <div align="center"><img src="./src/assets/imgs/tiltzin_appointment.png" alt="tiltzin-sample"></div>
+
 
 ### What to expect in the future
 

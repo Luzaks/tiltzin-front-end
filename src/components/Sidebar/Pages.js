@@ -1,8 +1,8 @@
 import React from 'react';
-import axios from 'axios';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import { logginCreator, pagesCreator } from '../../Redux/actions/actions';
+import deleteSessions from '../../api/deleteSessions';
+import { pagesCreator } from '../../Redux/actions/actions';
 import { PagesConatiner, PagesLink } from '../../styles/StyledComponents';
 import pagesHelper from '../../helpers/pagesHelper';
 
@@ -11,18 +11,7 @@ const Pages = ({ history }) => {
   const dispatch = useDispatch();
 
   const handleLogOut = () => {
-    axios.delete('https://fierce-taiga-99651.herokuapp.com/logout', { withCredentials: true })
-      .then(() => {
-        const state = {
-          status: 'NOT_LOGGED_IN',
-          user: {},
-        };
-        dispatch(logginCreator(state));
-        history.push('/');
-      }).catch(error => {
-        // eslint-disable-next-line no-console
-        console.log(error);
-      });
+    deleteSessions(dispatch, history);
     dispatch(pagesCreator('HOME'));
   };
 

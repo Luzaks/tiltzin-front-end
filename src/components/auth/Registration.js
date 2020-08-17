@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+import postRegistrations from '../../api/postRegistrations';
 import { userCreator } from '../../Redux/actions/actions';
 import { AuthCont, CircleButton, AuthHeader } from '../../styles/StyledComponents';
 
@@ -23,23 +23,9 @@ const Registration = ({ handleSuccesfullAuth, onClick }) => {
 
     dispatch(userCreator(user));
 
-    axios.post('http://localhost:3001/registrations',
-      {
-        user: {
-          username,
-          email,
-          password: pass,
-          password_confirmation: conpass,
-        },
-      },
-      { withCredentials: true }).then(r => {
-      if (r.data.status === 'created') {
-        handleSuccesfullAuth(r.data);
-      }
-    }).catch(error => {
-      // eslint-disable-next-line no-console
-      console.log(error);
-    });
+    postRegistrations(username, email, pass, conpass, handleSuccesfullAuth)
+      .then(r => r)
+      .catch(error => error);
     ev.preventDefault();
   }
 

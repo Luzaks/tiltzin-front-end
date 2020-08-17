@@ -16,7 +16,7 @@ const Appointments = () => {
       console.log(error);
     }
   }
-  fetchData();
+  fetchData().then();
   const tripsState = useSelector(state => state.trips);
   return (
     <div className="appoint-container">

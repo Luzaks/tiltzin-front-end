@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import axios from 'axios';
+import getSessions from '../api/getSessions';
 import Routes from '../Router/Routes';
 import { logginCreator, destiniesCreator } from '../Redux/actions/actions';
 import getDestinies from '../api/getDestinies';
@@ -26,25 +26,7 @@ class App extends React.Component {
   checkLoginStatus() {
     const { addLog, loggedIn } = this.props;
     const { status } = loggedIn;
-    axios.get('http://localhost:3001/logged_in', { withCredentials: true })
-      .then(r => {
-        const { data } = r;
-
-        if (data.logged_in && status === 'NOT_LOGGED_IN') {
-          const state = {
-            status: 'LOGGED_IN',
-            user: r.data.user,
-          };
-          addLog(state);
-        } else if (!data.logged_in && status === 'LOGGED_IN') {
-          const state = {
-            status: 'NOT_LOGGED_IN',
-            user: {},
-          };
-          addLog(state);
-        }
-      })// eslint-disable-next-line no-console
-      .catch(error => { console.log(error); });
+    getSessions(addLog, status);
   }
 
   render() {

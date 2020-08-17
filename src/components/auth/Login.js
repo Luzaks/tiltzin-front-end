@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import axios from 'axios';
+import postSessions from '../../api/postSessions';
 import { logginCreator } from '../../Redux/actions/actions';
 import { CircleButton, AuthCont, AuthHeader } from '../../styles/StyledComponents';
 
@@ -24,22 +24,9 @@ const Login = ({ handleSuccesfullAuth, onClick }) => {
 
     dispatch(logginCreator(loggedIn));
 
-    axios.post('https://fierce-taiga-99651.herokuapp.com/sessions',
-      {
-        user: {
-          username,
-          email,
-          password: pass,
-        },
-      },
-      { withCredentials: true }).then(r => {
-      if (r.data.logged_in) {
-        handleSuccesfullAuth(r.data);
-      }
-    }).catch(error => {
-      // eslint-disable-next-line no-console
-      console.log(error);
-    });
+    postSessions(username, email, pass, handleSuccesfullAuth)
+      .then(r => r)
+      .catch(error => error);
     ev.preventDefault();
   }
 

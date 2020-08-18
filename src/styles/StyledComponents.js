@@ -463,6 +463,17 @@ const AuthHeader = styled.h1`
   color: black;
 `;
 
+const Created = styled.span`
+  background-color: #a0fefd;
+  color: black;
+  padding: 5px 18px;
+  margin: 14px 0;
+  border-radius: 15px;
+  border-color: black aqua aqua black;
+  border-width: 2px;
+  border-style: solid;
+`;
+
 export {
   NavBar,
   Title,
@@ -508,4 +519,5 @@ export {
   HomeDescription,
   AuthCont,
   AuthHeader,
+  Created,
 };

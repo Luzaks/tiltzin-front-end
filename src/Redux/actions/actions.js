@@ -5,6 +5,7 @@ import {
   CREATE_DESTINY,
   CREATE_SELECTED,
   CREATE_DATE,
+  CREATE_TRIP,
   CREATE_TRIPS,
 } from './actionTypes';
 
@@ -58,6 +59,15 @@ function tripCreator(trip) {
   };
 }
 
+function createdCreator(status) {
+  return {
+    type: CREATE_TRIP,
+    payload: {
+      status,
+    },
+  };
+}
+
 function tripsCreator(trips) {
   return {
     type: CREATE_TRIPS,
@@ -72,5 +82,6 @@ export {
   destiniesCreator,
   selectedCreator,
   tripCreator,
+  createdCreator,
   tripsCreator,
 };

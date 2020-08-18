@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import deleteSessions from '../../api/deleteSessions';
-import { pagesCreator } from '../../Redux/actions/actions';
+import { createdCreator, pagesCreator } from '../../Redux/actions/actions';
 import { PagesConatiner, PagesLink } from '../../styles/StyledComponents';
 import pagesHelper from '../../helpers/pagesHelper';
 
@@ -12,6 +12,7 @@ const Pages = ({ history }) => {
 
   const handleLogOut = () => {
     deleteSessions(dispatch, history);
+    dispatch(createdCreator(false));
     dispatch(pagesCreator('HOME'));
   };
 

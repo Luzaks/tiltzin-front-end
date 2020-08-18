@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { selectedCreator } from '../Redux/actions/actions';
+import { createdCreator, selectedCreator } from '../Redux/actions/actions';
 import {
   Details,
   LeftHalf,
@@ -12,6 +12,7 @@ import {
   PresDescription,
   PresentationFamily,
   PostTrip,
+  Created,
 } from '../styles/StyledComponents';
 import ReturnArrow from '../assets/imgs/left.png';
 import Dating from '../components/Dashboard/Destiny/Date';
@@ -31,10 +32,16 @@ const Destiny = ({ destiny }) => {
   const userId = useSelector(state => state.loggedIn.user.id);
   const destinyId = useSelector(state => state.selected.destiny.id);
   const tripState = useSelector(state => state.trip.date);
+  const createTripState = useSelector(state => state.created.status);
 
-  const handleSubmit = ev => {
-    postTrip(userId, destinyId, tripState);
+  const handleSubmit = (ev, dispatch) => {
+    postTrip(userId, destinyId, tripState, dispatch);
     ev.preventDefault();
+  };
+
+  const reservedStatus = created => {
+    if (created === true) return <Created>Date reserved!</Created>;
+    return null;
   };
 
   return (
@@ -82,7 +89,8 @@ const Destiny = ({ destiny }) => {
         <PresDescription>
           You only have to choose a date and click  in the button below.
         </PresDescription>
-        <form className="date-form" onSubmit={ev => { handleSubmit(ev); }}>
+        <form className="date-form" onSubmit={ev => { handleSubmit(ev, dispatch); }}>
+          { reservedStatus(createTripState) }
           <Dating dispatch={dispatch} />
           <PostTrip type="submit">
             Reserve now
@@ -92,6 +100,7 @@ const Destiny = ({ destiny }) => {
       <Return
         onClick={() => {
           dispatch(selectedCreator(false, destiny));
+          dispatch(createdCreator(false));
         }}
       >
         <img className="arrows" src={ReturnArrow} alt="return-arrow" />

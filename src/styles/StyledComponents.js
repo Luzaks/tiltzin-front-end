@@ -467,11 +467,12 @@ const Created = styled.span`
   background-color: #a0fefd;
   color: black;
   padding: 5px 18px;
-  margin: 14px 0;
+  margin-bottom: 10px;
   border-radius: 15px;
   border-color: black aqua aqua black;
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
+  font-size: 10px;
 `;
 
 export {

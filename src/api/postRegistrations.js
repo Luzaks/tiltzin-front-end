@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const postRegistrations = async (username, email, pass, conpass, handleSuccesfullAuth) => {
-  axios.post('http://localhost:3001/registrations',
+  axios.post('https://fierce-taiga-99651.herokuapp.com/registrations',
     {
       username,
       email,

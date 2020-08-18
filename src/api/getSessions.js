@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const getSessions = (addLog, status) => {
-  axios.get('http://localhost:3001/logged_in', { withCredentials: true })
+  axios.get('https://fierce-taiga-99651.herokuapp.com/logged_in', { withCredentials: true })
     .then(r => {
       const { data } = r;
 

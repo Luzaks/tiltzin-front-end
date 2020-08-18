@@ -1,5 +1,5 @@
 const getDestinies = async () => {
-  const result = await fetch('http://localhost:3001/index');
+  const result = await fetch('https://fierce-taiga-99651.herokuapp.com/index');
   const data = await result.json();
 
   return data;

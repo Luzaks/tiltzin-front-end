@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createdCreator } from '../Redux/actions/actions';
 
 const postTrip = (userId, destinyId, date, dispatch) => {
-  axios.post('http://localhost:3001/trips',
+  axios.post('https://fierce-taiga-99651.herokuapp.com/trips',
     {
       user_id: parseInt(userId, 10),
       destiny_id: parseInt(destinyId, 10),

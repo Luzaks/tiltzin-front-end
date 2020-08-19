@@ -10,7 +10,7 @@ const dashboardHelper = (clicked, destinies, selected, loggedState) => {
   if (active) return <Destiny destiny={destiny} />;
   if (clicked === 'HOME') return <Home user={loggedState} />;
   if (clicked === 'DESTINIES') return <Slider slides={destinies} />;
-  if (clicked === 'APPOINTMENTS') return <Appointments />;
+  if (clicked === 'TRIPS') return <Appointments />;
   return null;
 };
 

@@ -11,7 +11,7 @@ const initialState = {
   },
   pages: {
     clicked: 'HOME',
-    pages: ['HOME', 'DESTINIES', 'APPOINTMENTS'],
+    pages: ['HOME', 'DESTINIES', 'TRIPS'],
   },
   destinies: [],
   selected: {

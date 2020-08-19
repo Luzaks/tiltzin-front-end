@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { createdCreator } from '../Redux/actions/actions';
 
-const postTrip = (userId, destinyId, date, dispatch) => {
+const postTrip = (userId, destinyId, date, city, dispatch) => {
   axios.post('http://localhost:3001/trips',
     {
       user_id: parseInt(userId, 10),
       destiny_id: parseInt(destinyId, 10),
+      destiny_name: city,
       date,
     },
     { withCredentials: true })

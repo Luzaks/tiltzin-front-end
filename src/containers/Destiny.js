@@ -35,7 +35,7 @@ const Destiny = ({ destiny }) => {
   const createTripState = useSelector(state => state.created.status);
 
   const handleSubmit = (ev, dispatch) => {
-    postTrip(userId, destinyId, tripState, dispatch);
+    postTrip(userId, destinyId, tripState, city, dispatch);
     ev.preventDefault();
   };
 

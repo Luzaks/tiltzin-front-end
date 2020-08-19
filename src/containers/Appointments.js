@@ -9,9 +9,12 @@ const Appointments = () => {
   getTrips(dispatch);
 
   const tripsState = useSelector(state => state.trips);
+
   return (
     <div className="appoint-container">
-      {tripsState.map(trip => (<Appointment key={trip.id} date={trip.date} />))}
+      {tripsState.map(trip => (
+        <Appointment key={trip.id} date={trip.date} city={trip.destiny_name} />
+      ))}
     </div>
   );
 };

@@ -1,8 +1,11 @@
-const dateExtract = date => date.slice(0, 10);
-
-const timeExtract = date => date.slice(11, 16);
+const cityUpper = city => city.toUpperCase();
+const dayExtract = date => date.slice(8, 10);
+const monthExtract = date => date.slice(5, 7);
+const yearExtract = date => date.slice(0, 4);
 
 export {
-  dateExtract,
-  timeExtract,
+  cityUpper,
+  dayExtract,
+  monthExtract,
+  yearExtract,
 };

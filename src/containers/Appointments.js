@@ -13,7 +13,7 @@ const Appointments = () => {
   return (
     <div className="appoint-container">
       {tripsState.map(trip => (
-        <Appointment key={trip.id} date={trip.date} city={trip.destiny_name} />
+        <Appointment key={trip.id} tripInfo={trip} />
       ))}
     </div>
   );

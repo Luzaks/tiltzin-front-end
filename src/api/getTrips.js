@@ -2,7 +2,7 @@ import axios from 'axios';
 import { tripsCreator } from '../Redux/actions/actions';
 
 const getTrips = dispatch => {
-  axios.get('http://localhost:3001/list_trips', { withCredentials: true })
+  axios.get('https://fierce-taiga-99651.herokuapp.com/trips', { withCredentials: true })
     .then(r => {
       const { data } = r;
       const { trips } = data;

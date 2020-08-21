@@ -9,11 +9,17 @@ const Appointments = () => {
   getTrips(dispatch);
 
   const tripsState = useSelector(state => state.trips);
+  const userId = useSelector(state => state.loggedIn.user.id);
+
+  const tripsFilter = (trip, Id) => {
+    if (trip.user_id === Id) return <Appointment key={trip.id} tripInfo={trip} />;
+    return null;
+  };
 
   return (
     <div className="appoint-container">
       {tripsState.map(trip => (
-        <Appointment key={trip.id} tripInfo={trip} />
+        tripsFilter(trip, userId)
       ))}
     </div>
   );

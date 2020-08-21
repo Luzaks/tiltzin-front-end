@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const postSessions = async (username, email, pass, handleSuccesfullAuth) => {
-  axios.post('http://localhost:3001/sessions',
+  axios.post('https://fierce-taiga-99651.herokuapp.com/sessions',
     {
       username,
       email,

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'Typographica';
+  src:
+    local('Typographica'),
+    url('../assets/fonts/Typographica.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Choppers';
+  src:
+    local('Choppers'),
+    url('../assets/fonts/Choppers.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ImSpiegelland';
+  src:
+    local('ImSpiegelland'),
+    url('../assets/fonts/ImSpiegelland.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MeganJune';
+  src:
+    local('MeganJune'),
+    url('../assets/fonts/MeganJune.ttf') format('truetype');
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+html,
+body,
+body * {
+  transition: all 500ms ease-in-out;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root,
+.App,
+.landing-container {
+  width: inherit;
+  height: inherit;
+}

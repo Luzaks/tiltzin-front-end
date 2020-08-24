@@ -1,0 +1,126 @@
+.landing-container {
+  background-image: url("../assets/imgs/landing.jpg");
+}
+
+.not-logged {
+  background-image: url("../assets/imgs/26671.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.not-logged-container {
+  width: 75%;
+  height: 75%;
+  border: 8px black solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-link {
+  margin-top: 5%;
+  color: black;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  height: fit-content;
+  align-items: center;
+  position: absolute;
+  background-color: #a0fefd;
+  padding: 6% 0;
+  font-family: Typographica, sans-serif;
+  letter-spacing: 2px;
+}
+
+.username,
+.email,
+.password,
+.password_confirmation {
+  padding-left: 8px;
+}
+
+.username,
+.email,
+.password,
+.password_confirmation,
+.submit-btn {
+  width: 70%;
+  margin-top: 4%;
+  height: 35px;
+  border-radius: 30px;
+  background-color: transparent;
+  border-color: black aqua aqua black;
+}
+
+.submit-btn {
+  width: 22%;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-weight: 900;
+}
+
+.submit-btn:hover {
+  background-color: transparent;
+}
+
+.info-logo {
+  animation: Title-logo-spin infinite 10s linear;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.date-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 107%;
+  height: 25%;
+  justify-content: center;
+}
+
+.react-datepicker-wrapper {
+  width: 50%;
+}
+
+.react-datepicker__input-container,
+.date-picker {
+  width: 100%;
+}
+
+.arrows {
+  width: 20px;
+  height: 20px;
+}
+
+.appoint-container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-image: url('../assets/imgs/maya.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 75%;
+  overflow-y: hidden;
+}
+
+@keyframes Title-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
